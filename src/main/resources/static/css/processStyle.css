@@ -1,0 +1,189 @@
+/* 전체 레이아웃 설정 */
+.a-s-process-reservation-check,
+.a-s-process-reservation-check * {
+  box-sizing: border-box;
+}
+.a-s-process-reservation-check {
+  background: #fffefb;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 클릭 가능한 큰 원 버튼들 */
+.clickable-button {
+  background-color: #f0ece4;
+  border: none;
+  position: absolute;
+  width: 366px; /* 고정 크기 */
+  height: 366px; /* 고정 크기 */
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.clickable-button:hover:not(.clicked) {
+  background-color: #f64e4b;
+}
+
+.clicked {
+  background-color: #f64e4b;
+}
+
+.clickable-image {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* 큰 원의 텍스트 설정 */
+.button-text {
+  font-family: "LgEiTextTtf-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+  position: absolute;
+  width: 366px; /* 원과 동일한 너비 */
+  text-align: center;
+  transform: translateY(-120%);
+}
+
+/* 큰 원의 위치 설정 */
+#ellipseButton1 {
+  left: 225px;
+  top: 365px;
+}
+
+#text1 {
+  left: 225px;
+  top: 365px;
+}
+
+#ellipseButton2 {
+  left: 748px;
+  top: 365px;
+}
+
+#text2 {
+  left: 748px;
+  top: 365px;
+}
+
+#ellipseButton3 {
+  left: 1271px;
+  top: 365px;
+}
+
+#text3 {
+  left: 1271px;
+  top: 365px;
+}
+
+#ellipseButton4 {
+  left: 1794px;
+  top: 365px;
+}
+
+#text4 {
+  left: 1794px;
+  top: 365px;
+}
+
+/* 작은 원들의 위치 및 크기 조정 */
+.ellipse-10, .ellipse-14, .ellipse-12, .ellipse-11, .ellipse-15, .ellipse-13 {
+  background-color: #f0ece4;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); /* 고정된 그림자 크기 */
+}
+
+/* 작은 원의 크기 */
+.ellipse-10, .ellipse-14, .ellipse-12, .ellipse-11, .ellipse-15, .ellipse-13 {
+  width: 27px; /* 고정 크기 */
+  height: 27px; /* 고정 크기 */
+}
+
+/* 각 작은 원의 위치 */
+.ellipse-10 {
+  left: 1152px;
+  top: 534px;
+}
+
+.ellipse-14 {
+  left: 629px;
+  top: 547px;
+}
+
+.ellipse-12 {
+  left: 1675px;
+  top: 534px;
+}
+
+.ellipse-11 {
+  left: 1207px;
+  top: 534px;
+}
+
+.ellipse-15 {
+  left: 684px;
+  top: 547px;
+}
+
+.ellipse-13 {
+  left: 1730px;
+  top: 534px;
+}
+
+/* 선과 박스 설정 */
+.line-2 {
+  margin-top: -3px;
+  border-style: solid;
+  border-color: #757575;
+  border-width: 3px 0 0 0;
+  width: 1986px;
+  height: 0px;
+  position: absolute;
+  left: 197px;
+  top: 826px;
+  transform-origin: 0 0;
+  transform: rotate(0.029deg) scale(1, 1);
+}
+
+.rectangle-3096 {
+  background: #f4f4f4;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 1986px;
+  height: 668px;
+  position: absolute;
+  left: 205px;
+  top: 903px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* 완료 확인 아이콘 */
+.free-icon-confirm-467129-1 {
+  width: 233px;
+  height: 233px;
+  position: absolute;
+  left: 1073px;
+  top: 1004px;
+}
+
+/* 완료 확인 텍스트 */
+.your-reservation-has-been-confirmed {
+  color: #000000;
+  text-align: left;
+  font-family: "LgEiTextTtf-Bold", sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  left: 618px;
+  top: 1299px;
+}
