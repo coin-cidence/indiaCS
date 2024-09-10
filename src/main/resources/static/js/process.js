@@ -30,12 +30,18 @@ buttons.forEach(button => {
 
     // 특정 버튼 클릭 시 하단 상자와 텍스트 내용 변경
     if (button.id === 'ellipseButton2') {  // Diagnosis 버튼을 클릭했을 때
-      diagnosticProcessBox.style.background = '#d0f0c0';  // 상자의 배경색을 변경
-      diagnosticText.innerHTML = 'Diagnosis: <br> We\'ve identified the issue with your device as Screen Crack.';
-    } else {
+//      diagnosticProcessBox.style.background = '#d0f0c0';  // 상자의 배경색을 변경
+        diagnosticText.innerHTML = 'Diagnosis';
+    }else if(button.id === 'ellipseButton3'){
+        diagnosticText.innerHTML = 'Repair';
+    }
+    else if(button.id === 'ellipseButton4'){
+        diagnosticText.innerHTML = 'Complete';
+    }
+    else{
       // 다른 버튼 클릭 시 원래 내용 복원
-      diagnosticProcessBox.style.background = '#f4f4f4';
-      diagnosticText.innerHTML = 'Your reservation has been confirmed';
+//      diagnosticProcessBox.style.background = '#f4f4f4';
+        diagnosticText.innerHTML = 'Your reservation has been confirmed';
     }
   });
 });
