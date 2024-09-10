@@ -1,7 +1,7 @@
-package com.lgdx.indiaCS.service.user;
+package com.lgdx.indiaCS.service;
 
-import com.lgdx.indiaCS.domain.user.User;
-import com.lgdx.indiaCS.repository.user.UserRepository;
+import com.lgdx.indiaCS.domain.User;
+import com.lgdx.indiaCS.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

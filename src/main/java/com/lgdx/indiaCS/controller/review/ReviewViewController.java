@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ReviewViewController {
 
+    @GetMapping("/reviewSurvey")
+    public String reviewSurvey() { return  "/reviewSurvey"; }
+
     @GetMapping("/reviewComplete")
     public String reviewComplete() {
         return "/reviewComplete";
     }
-
 
 }

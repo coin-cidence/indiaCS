@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG Service Survey</title>
+    <link rel="stylesheet" href="css/reviewSurvey.css">
+</head>
+<body>
+<div class="div">
+    <div class="vector">
+        <div class="logo">
+            <img
+                    class="lg_logo"
+                    src="img/reviewSurvey/lge-logo-en-heritage-red-grey-20.png"
+            />
+            <div class="lg_text">LG</div>
+        </div>
+        <div class="menus">
+            <div class="menu">
+                TV/Audio/Video
+            </div>
+            <div class="menu">
+                Home Appliances
+            </div>
+            <div class="menu">
+                Air Solutions
+            </div>
+            <div class="menu">
+                Computing
+            </div>
+        </div>
+        <div class="buttons">
+            <select class="lan">
+                <option class="text">English</option>
+            </select>
+            <div class="button">
+                Contact Us
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <section class="survey-container">
+        <h1>How was your Service?</h1>
+        <form id="surveyForm">
+            <div class="question-container">
+                <div class="question">
+                    <label>01. Was the problem sufficiently resolved through the technician’s repair service?</label>
+                    <div class="options">
+                        <input type="radio" id="q1a1" name="q1" value="strongly_agree"> Strongly agree<br>
+                        <input type="radio" id="q1a2" name="q1" value="agree"> Agree<br>
+                        <input type="radio" id="q1a3" name="q1" value="neutral"> Neutral<br>
+                        <input type="radio" id="q1a4" name="q1" value="disagree"> Disagree<br>
+                        <input type="radio" id="q1a5" name="q1" value="never"> Never
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>02. Was the technician friendly?</label>
+                    <div class="options">
+                        <input type="radio" id="q2a1" name="q2" value="strongly_agree"> Strongly agree<br>
+                        <input type="radio" id="q2a2" name="q2" value="agree"> Agree<br>
+                        <input type="radio" id="q2a3" name="q2" value="neutral"> Neutral<br>
+                        <input type="radio" id="q2a4" name="q2" value="disagree"> Disagree<br>
+                        <input type="radio" id="q2a5" name="q2" value="never"> Never
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>03. Did the technician keep the appointment time well?</label>
+                    <div class="options">
+                        <input type="radio" id="q3a1" name="q3" value="strongly_agree"> Strongly agree<br>
+                        <input type="radio" id="q3a2" name="q3" value="agree"> Agree<br>
+                        <input type="radio" id="q3a3" name="q3" value="neutral"> Neutral<br>
+                        <input type="radio" id="q3a4" name="q3" value="disagree"> Disagree<br>
+                        <input type="radio" id="q3a5" name="q3" value="never"> Never
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>04. More about us!</label>
+                    <textarea id="q4" name="q4" rows="4" cols="50"></textarea>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <button type="button" onclick="submitSurvey()">Submit</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<script src="js/reviewSurvey.js"></script>
+</body>
+</html>

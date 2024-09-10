@@ -1,7 +1,7 @@
 package com.lgdx.indiaCS.controller.user;
 
-import com.lgdx.indiaCS.domain.user.User;
-import com.lgdx.indiaCS.service.user.UserService;
+import com.lgdx.indiaCS.domain.User;
+import com.lgdx.indiaCS.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

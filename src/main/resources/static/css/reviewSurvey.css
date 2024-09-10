@@ -1,0 +1,187 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div,
+.div * {
+  box-sizing: border-box;
+}
+.div {
+  background-image: url('../img/reviewSurvey/_22-post-service-survey.png');
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.navigation-bar {
+  position: absolute;
+  inset: 0;
+}
+.vector {
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  overflow: visible;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: row;
+
+}
+.logo {
+  width: 10%;
+  height: 100%;
+  position: static;
+  display: flex;
+  padding-left:20px;
+  align-items: center;
+  justify-content: center;
+}
+.lg_logo {
+  height: 100%;
+  object-fit:contain;
+  align-items:center;
+}
+.lg_text {
+  color: #545454;
+  text-align: left;
+  font-family: "LgEiHeadlineTtf-Bold", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  align-items: center;
+}
+.menus {
+  width:65%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left:30px;
+  padding-right:30px;
+  align-items: center;
+  font-weight: 600;
+}
+.menu {
+  font-size: medium;
+}
+.buttons {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left:70px;
+  padding-right:20px;
+  align-items: center;
+  font-weight: 600;
+}
+.button {
+  font-size: medium;
+  border: 1px solid #000; /* 테두리 색상과 두께 */
+  padding: 5px 10px; /* 버튼 내부 여백 */
+  border-radius: 10px; /* 모서리 둥글게 */
+
+}
+.contact-us {
+  color: #545454;
+  text-align: center;
+  font-family: "LgEiHeadlineVf-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  right: 6.2%;
+  left: 85.37%;
+  width: 8.42%;
+  bottom: 96.73%;
+  top: 1.57%;
+  height: 1.7%;
+}
+
+.lan {
+  font-size: medium;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+ -webkit-font-smoothing: antialiased;
+}
+
+/* Survey Section */
+.survey-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 배경 반투명 */
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.survey-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b51f4d;
+}
+
+/* Grid Layout for Questions */
+.question-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.question {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* Submit Button Styling */
+button {
+    background-color: #b51f4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+button:hover {
+    background-color: #9c1740;
+}
+
+/* Positioning the Submit Button */
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    position: relative;
+}
