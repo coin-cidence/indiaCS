@@ -12,6 +12,7 @@ import java.util.Optional;
 public interface ReviewMoreRepository extends JpaRepository<ReviewMore, String> {
 
     @Query("SELECT r FROM ReviewMore r WHERE r.asRequestId = :asRequestId")
+
     Optional<ReviewMore> findByAsRequestId(@Param("asRequestId") String asRequestId);
 
 }
