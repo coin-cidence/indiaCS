@@ -3,9 +3,12 @@ package com.lgdx.indiaCS.controller.user;
 import com.lgdx.indiaCS.domain.User;
 import com.lgdx.indiaCS.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class UserDataController {
@@ -13,18 +16,33 @@ public class UserDataController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/checkUserId")
-    public boolean checkUserId(@RequestParam("userId") String userId) {
-        System.out.println("사용자 중복 확인 요청 ID : " + userId);
+    @PostMapping("/reservation-check")
+    public ResponseEntity<Map<String, Object>> checkReservation(@RequestBody Map<String, String> requestBody) {
+        String asRequestId = requestBody.get("asRequestId");
+        boolean find = userService.checkReservationNumber(asRequestId);
 
-        User user = userService.loginCheck(userId);
-
-        if (user != null) {
-            return true;
+        Map<String, Object> response = new HashMap<>();
+        if (find) {
+            response.put("success", true);
+            return ResponseEntity.ok(response);
         } else {
-            return false;
+            response.put("success", false);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
     }
+
+//    @GetMapping("/checkUserId")
+//    public boolean checkUserId(@RequestParam("userId") String userId) {
+//        System.out.println("사용자 중복 확인 요청 ID : " + userId);
+//
+//        User user = userService.loginCheck(userId);
+//
+//        if (user != null) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 
 
 }

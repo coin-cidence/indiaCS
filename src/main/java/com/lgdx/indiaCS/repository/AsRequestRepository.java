@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AsRequestRepository extends JpaRepository<AsRequest, String> {
 
+    boolean findByAsRequestId(String asRequestId);
+
 }

@@ -14,4 +14,9 @@ public class ReviewViewController {
         return "/reviewComplete";
     }
 
+    @GetMapping("/reservationCheck")
+    public String reservationCheck() {
+        return "/reservationCheck";
+    }
+
 }
