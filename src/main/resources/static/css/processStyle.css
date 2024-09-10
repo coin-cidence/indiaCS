@@ -436,26 +436,47 @@
   object-fit: cover; /* 이미지 비율 유지 */
   z-index: 0; /* 배경 이미지가 가장 뒤에 있도록 설정 */
 }
+
 .rating {
   position: absolute;
-  left: 33%;
+  left: 37%;
   top: 55%;
   display: flex; /* Flexbox로 컨테이너 설정 */
   flex-direction: column; /* 세로 방향으로 정렬 */
   align-items: center; /* 가로 방향 가운데 정렬 */
-  gap: 20px; /* 각 요소 사이 간격 */
+  gap :20px;
+  justify-content: center;
 }
 
 .image {
-  width: 22%;
+   width: 30%;
+ }
+
+.comment{
+  font-size: 25px;
+}
+
+/* 기본 별 색상 */
+.star-rating {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex; /* Flexbox로 컨테이너 설정 */
+  flex-direction: row; /* 거로 방향으로 정렬 */
+  position: relative;
+  justify-content: center;
+  gap:10px;
 }
 
 .star {
-  width: 55%;
+  background-image: url("../img/process/star.svg");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  transition: background-image 0.3s ease;
 }
 
-.comment {
-  font-size: 30px;
-  text-align: center; /* 텍스트 가운데 정렬 */
+.filled {
+  background-image: url("../img/process/filled-star.svg");
 }
 

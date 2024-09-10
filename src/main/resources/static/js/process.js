@@ -1,16 +1,25 @@
 // DOM으로 요소 접근
 const buttons = document.querySelectorAll('.clickable-button');
+
 const confirmationText = document.querySelector('.your-reservation-has-been-confirmed');
 const confirmedIcon = document.querySelector('.free-icon-confirm-467129-1');
+
 const progressTextTitle = document.querySelector('.diagnostic-progress');
+
 const progressDate1 = document.querySelector('.complete-diagnose-1');
+const progressDate1Text = document.querySelector('.complete-time-1');
 const progressText1 = document.querySelector('.diagnose-content-1');
+
 const progressDate2 = document.querySelector('.complete-diagnose-2');
+const progressDate2Text = document.querySelector('.complete-time-2');
 const progressText2 = document.querySelector('.diagnose-content-2');
+
 const progressDate3 = document.querySelector('.complete-diagnose-3');
 const progressText3 = document.querySelector('.diagnose-content-3');
+
 const progressDate4 = document.querySelector('.complete-diagnose-4');
 const progressText4 = document.querySelector('.diagnose-content-4');
+
 const line6 = document.querySelector('.line-6');
 const background = document.querySelector('.background');
 const rating = document.querySelector('.rating');
@@ -51,16 +60,28 @@ buttons.forEach(button => {
         background.style.visibility = 'hidden';
         rating.style.visibility = 'hidden';
         line6.style.visibility = 'visible';
+
         confirmedIcon.style.visibility = 'hidden';
         confirmationText.style.visibility = 'hidden';
+
         progressTextTitle.innerHTML = 'Diagnostic Progress';
         progressTextTitle.style.visibility = 'visible';
+
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
+        progressDate1Text.innerHTML = '2024.09.06 13:30';
+        progressText1.innerHTML = 'Service technician visit.';
+
         progressDate2.style.visibility = 'visible';
         progressText2.style.visibility = 'visible';
+        progressDate2Text.innerHTML = '2024.09.06 17:10';
+        progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'> HDMI Port Failure</span>.";
+        var progressText2Span = document.querySelector('.real-diagnose-content');
+        progressText2Span.innerText = " HDMI Port Failure";
+
         progressDate3.style.visibility = 'hidden';
         progressText3.style.visibility = 'hidden';
+
         progressDate4.style.visibility = 'hidden';
         progressText4.style.visibility = 'hidden';
     }else if(button.id === 'ellipseButton3'){
@@ -68,16 +89,28 @@ buttons.forEach(button => {
         background.style.visibility = 'hidden';
         rating.style.visibility = 'hidden';
         line6.style.visibility = 'visible';
+
         confirmedIcon.style.visibility = 'hidden';
         confirmationText.style.visibility = 'hidden';
+
         progressTextTitle.innerHTML = 'Repair Progress';
         progressTextTitle.style.visibility = 'visible';
+
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
+        progressDate1Text.innerHTML = '2024.09.09 10:10';
+        progressText1.innerHTML = 'Parts order completed. (Parts inventory location: Changwon, South Korea)'
+
         progressDate2.style.visibility = 'visible';
         progressText2.style.visibility = 'visible';
+        progressDate2Text.innerHTML = '2024.09.09 16:20';
+        progressText2.innerHTML = 'Parts shipment initiated. <span class="real-diagnose-content"> HDMI Port Failure</span>';
+        var progressText2Span = document.querySelector('.real-diagnose-content');
+        progressText2Span.innerText = '';
+
         progressDate3.style.visibility = 'visible';
         progressText3.style.visibility = 'visible';
+
         progressDate4.style.visibility = 'visible';
         progressText4.style.visibility = 'visible';
     }
@@ -118,3 +151,31 @@ buttons.forEach(button => {
     }
   });
 });
+
+const stars = document.querySelectorAll('.star');
+
+// 각 별에 마우스 오버 이벤트를 추가
+stars.forEach((star, index) => {
+    star.addEventListener('mouseover', () => {
+        fillStars(index);
+    });
+
+    // 마우스가 벗어났을 때 별을 초기화
+    star.addEventListener('mouseout', () => {
+        resetStars();
+    });
+});
+
+// n번째 별까지 채우는 함수
+function fillStars(index) {
+    for (let i = 0; i <= index; i++) {
+        stars[i].classList.add('filled');
+    }
+}
+
+// 모든 별을 초기 상태로 되돌리는 함수
+function resetStars() {
+    stars.forEach(star => {
+        star.classList.remove('filled');
+    });
+}
