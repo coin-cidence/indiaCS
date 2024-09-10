@@ -12,6 +12,9 @@ const progressText3 = document.querySelector('.diagnose-content-3');
 const progressDate4 = document.querySelector('.complete-diagnose-4');
 const progressText4 = document.querySelector('.diagnose-content-4');
 const line6 = document.querySelector('.line-6');
+const background = document.querySelector('.background');
+const rating = document.querySelector('.rating');
+const rectangle = document.querySelector('.rectangle');
 
 // 초기 화면 설정: confirmation 버튼을 클릭된 상태로 설정
 const initialButton = document.querySelector('#ellipseButton1'); // confirmation 버튼을 지정
@@ -28,6 +31,9 @@ progressText3.style.visibility = 'hidden';
 progressDate4.style.visibility = 'hidden';
 progressText4.style.visibility = 'hidden';
 line6.style.visibility = 'hidden';
+background.style.visibility = 'hidden';
+rating.style.visibility = 'hidden';
+rectangle.style.visibility = 'visible';
 
 buttons.forEach(button => {
   button.addEventListener('click', function() {
@@ -41,10 +47,14 @@ buttons.forEach(button => {
 
     // 특정 버튼 클릭 시 하단 상자와 텍스트 내용 변경
     if (button.id === 'ellipseButton2') {  // Diagnosis 버튼을 클릭했을 때
+        rectangle.style.visibility = 'visible';
+        background.style.visibility = 'hidden';
+        rating.style.visibility = 'hidden';
         line6.style.visibility = 'visible';
         confirmedIcon.style.visibility = 'hidden';
         confirmationText.style.visibility = 'hidden';
         progressTextTitle.innerHTML = 'Diagnostic Progress';
+        progressTextTitle.style.visibility = 'visible';
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
         progressDate2.style.visibility = 'visible';
@@ -54,10 +64,14 @@ buttons.forEach(button => {
         progressDate4.style.visibility = 'hidden';
         progressText4.style.visibility = 'hidden';
     }else if(button.id === 'ellipseButton3'){
+        rectangle.style.visibility = 'visible';
+        background.style.visibility = 'hidden';
+        rating.style.visibility = 'hidden';
         line6.style.visibility = 'visible';
         confirmedIcon.style.visibility = 'hidden';
         confirmationText.style.visibility = 'hidden';
         progressTextTitle.innerHTML = 'Repair Progress';
+        progressTextTitle.style.visibility = 'visible';
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
         progressDate2.style.visibility = 'visible';
@@ -68,6 +82,9 @@ buttons.forEach(button => {
         progressText4.style.visibility = 'visible';
     }
     else if(button.id === 'ellipseButton4'){
+        rectangle.style.visibility = 'hidden';
+        background.style.visibility = 'visible';
+        rating.style.visibility = 'visible';
         line6.style.visibility = 'hidden';
         confirmedIcon.style.visibility = 'hidden';
         confirmationText.style.visibility = 'hidden';
@@ -82,7 +99,10 @@ buttons.forEach(button => {
         progressText4.style.visibility = 'hidden';
     }
     else{
+        rectangle.style.visibility = 'visible';
         line6.style.visibility = 'hidden';
+        background.style.visibility = 'hidden';
+        rating.style.visibility = 'hidden';
         confirmedIcon.style.visibility = 'visible';
         confirmationText.style.visibility = 'visible';
         progressTextTitle.style.visibility = 'hidden';

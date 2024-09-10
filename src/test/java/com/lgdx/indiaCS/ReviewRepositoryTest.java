@@ -1,6 +1,7 @@
 package com.lgdx.indiaCS;
 
 import com.lgdx.indiaCS.domain.ReviewMore;
+import com.lgdx.indiaCS.repository.ReviewMoreRepository;
 import com.lgdx.indiaCS.repository.ReviewRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,10 @@ import java.util.Date;
 @SpringBootTest
 public class ReviewRepositoryTest {
 
-    ReviewRepository reviewRepository;
+    ReviewMoreRepository reviewMoreRepository;
 
     @Autowired
-    public ReviewRepositoryTest( ReviewRepository reviewRepository ) { this.reviewRepository = reviewRepository; }
+    public ReviewRepositoryTest( ReviewMoreRepository reviewMoreRepository ) { this.reviewMoreRepository = reviewMoreRepository; }
 
     @Test
     public void 리뷰적재_테스트() {
@@ -28,6 +29,6 @@ public class ReviewRepositoryTest {
         reviewMore.setQuestion3(5);
         reviewMore.setReviewComment("기사님이 설치는 잘 해주셨는데, 기기 사용법 설명이 미숙했습니다.");
 
-//        reviewRepository.save(reviewMore);
+        reviewMoreRepository.save(reviewMore);
     }
 }
