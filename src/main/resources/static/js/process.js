@@ -208,7 +208,7 @@ document.getElementById('modalAbove').addEventListener('click', function (e) {
 
 // Yes 버튼 클릭 시 처리
 document.getElementById('modalYesButton').addEventListener('click', function () {
-    window.location.href = '/reviewSurvey'; // Spring Controller의 매핑된 URL로 이동
+    window.location.href = '/review-survey'; // Spring Controller의 매핑된 URL로 이동
     document.getElementById('modalAbove').style.display = 'none';
 });
 

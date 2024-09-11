@@ -14,12 +14,8 @@ public class ReviewService {
     ReviewMoreRepository reviewMoreRepository;
 
     public void saveReview(ReviewMore reviewMore) {
-        // Set review date if not set from the client (just in case)
-        if (reviewMore.getReviewDate() == null) {
-            reviewMore.setReviewDate(new Date());
-        }
 
-        // Save to the database using the repository
+
         reviewMoreRepository.save(reviewMore);
     }
 
