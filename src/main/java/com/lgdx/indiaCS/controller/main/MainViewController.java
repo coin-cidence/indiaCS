@@ -41,4 +41,22 @@ public class MainViewController {
     public String deviceSelectionInstall() {
         return "/deviceSelectionInstall";
     }
+
+    @GetMapping("/diagnose1")
+    public String diag1() { return  "/diagnosis_1"; }
+
+    @GetMapping("/diagnose2")
+    public String diag2() {
+        return "/diagnosis_2";
+    }
+
+    @GetMapping("/diagnose3")
+    public String diag3() {
+        return "/diagnosis_3";
+    }
+
+    @GetMapping("/reservation")
+    public String res() {
+        return "/reservationAS";
+    }
 }

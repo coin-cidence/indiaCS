@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reservationAS.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+   </head>
+<body>
+    <div class="vector">
+      <div class="logo">
+        <img
+          class="lg_logo"
+          src="img/diagnosis/lge-logo-en-heritage-red-grey-20.png"
+        />
+        <div class="lg_text">LG</div>
+      </div>
+      <div class="menus">
+        <div class="menu">TV/Audio/Video</div>
+        <div class="menu">Home Appliances</div>
+        <div class="menu">Air Solutions</div>
+        <div class="menu">Computing</div>
+      </div>
+      <div class="buttons">
+        <select class="lan">
+          <option class="text">English</option>
+        </select>
+        <div class="button">Contact Us</div>
+      </div>
+    </div>
+  <div class="content">
+    <div class="sector1">
+      <div class="service-center-name">
+        DELHI CENTER A
+      </div>
+      <form class="search-box" action="" method="get">
+          <input class="search-text" type="text" placeholder="search">
+          <button class="search-btn" type="submit">SEARCH</button>
+      </form>
+      <div class="empty-space"></div> <!-- 공백 구간 -->
+    </div>
+
+    <div class="sector2">
+      <div class="container">
+        <div class="date-title">[ Date ]</div>
+        <br>
+        <input type="text" id="date-input" placeholder="MM/DD/YYYY" readonly>
+        <div id="calendar">
+            <div class="month">
+                <span class="prev" onclick="moveMonth(-1)">&#10094;</span>
+                <span id="month-year"></span>
+                <span class="next" onclick="moveMonth(1)">&#10095;</span>
+            </div>
+            <div class="weekdays">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <div class="days" id="days"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sector3">
+      <div class="time-title">[ Time ]</div>
+        <div class="time-container">
+          <div class="select-time">
+            <div class="time-section">
+              <div class="time-label">[ A M ]</div>
+              <div class="times">
+                <button class="time">09:00</button>
+                <button class="time">09:30</button>
+                <button class="time">10:00</button>
+                <button class="time">10:30</button>
+                <button class="time">11:00</button>
+                <button class="time">11:30</button>
+              </div>
+            </div>
+            <div class="time-section">
+              <div class="time-label">[ P M ]</div>
+              <div class="times">
+                <button class="time">13:00</button>
+                <button class="time">13:30</button>
+                <button class="time">14:00</button>
+                <button class="time">14:30</button>
+                <button class="time">15:00</button>
+                <button class="time">15:30</button>
+                <button class="time">16:00</button>
+                <button class="time">16:30</button>
+                <button class="time">17:00</button>
+                <button class="time">17:30</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="confirm">
+          <div class="confirm-text">Confirm Your Reservation</div>
+          <button class="confirm-btn" type="submit">YES!</button>
+        </div>
+      </div>
+    </div>
+<script src="js/reservationAS.js"></script>
+</body>
+</html>
