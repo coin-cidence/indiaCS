@@ -13,20 +13,4 @@ import java.util.Map;
 @RestController
 public class UserDataController {
 
-
-
-//    @GetMapping("/checkUserId")
-//    public boolean checkUserId(@RequestParam("userId") String userId) {
-//        System.out.println("사용자 중복 확인 요청 ID : " + userId);
-//
-//        User user = userService.loginCheck(userId);
-//
-//        if (user != null) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
-
-
 }

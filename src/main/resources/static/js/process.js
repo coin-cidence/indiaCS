@@ -214,6 +214,6 @@ document.getElementById('modalYesButton').addEventListener('click', function () 
 
 // No 버튼 클릭 시 처리
 document.getElementById('modalNoButton').addEventListener('click', function () {
-    alert(`홈으로 이동 구현 예정!`);
+    window.location.href = '/Installation_AS(login)'; // Spring Controller의 매핑된 URL로 이동
     document.getElementById('modalAbove').style.display = 'none';
 });

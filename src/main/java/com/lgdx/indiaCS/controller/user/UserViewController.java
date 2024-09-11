@@ -1,5 +1,6 @@
 package com.lgdx.indiaCS.controller.user;
 
+import com.lgdx.indiaCS.domain.User;
 import com.lgdx.indiaCS.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,22 @@ public class UserViewController {
         } else {
             model.addAttribute("error", "Reservation number not found. Please try again.");
             return "/reservationCheck";  // 실패 시 같은 페이지로 이동하며 오류 메시지 표시
+        }
+    }
+
+    @PostMapping("/login-process")
+    public String loginProcess(@RequestParam("userId") String userId,
+                               @RequestParam("password") String password,
+                               Model model,
+                               HttpSession session) {
+        User user = userService.login(userId, password);
+
+        if(user != null) {
+            model.addAttribute("username", user.getUserName());
+            return "/Installation_AS(mypage)";
+        } else {
+            model.addAttribute("error", "ID or Password not found. Please try again.");
+            return "/login";
         }
     }
 
