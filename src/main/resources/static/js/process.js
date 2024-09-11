@@ -153,6 +153,7 @@ buttons.forEach(button => {
 });
 
 const stars = document.querySelectorAll('.star');
+let selectedRating = 0; // 사용자가 클릭한 별점 저장
 
 // 각 별에 마우스 오버 이벤트를 추가
 stars.forEach((star, index) => {
@@ -163,7 +164,18 @@ stars.forEach((star, index) => {
     // 마우스가 벗어났을 때 별을 초기화
     star.addEventListener('mouseout', () => {
         resetStars();
+        if(selectedRating > 0){
+            updateStars(selectedRating);
+        }
     });
+
+    // 별점 클릭 이벤트 추가
+    star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-value'); // 클릭한 별의 값을 가져옴
+            updateStars(rating); // 별점 업데이트 함수 호출 (별점 저장)
+//            alert(`You rated this: ${rating} out of 5 stars!`); // 결과 출력
+            document.getElementById('modalAbove').style.display = 'flex';
+        });
 });
 
 // n번째 별까지 채우는 함수
@@ -179,3 +191,29 @@ function resetStars() {
         star.classList.remove('filled');
     });
 }
+
+// 클릭한 별 이후로 별 채우는 함수
+function updateStars(rating) {
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('filled');
+    }
+}
+
+// 모달창 바깥 부분 클릭 시 모달창 닫기
+document.getElementById('modalAbove').addEventListener('click', function (e) {
+    if (e.target === this) {
+      this.style.display = 'none';
+    }
+});
+
+// Yes 버튼 클릭 시 처리
+document.getElementById('modalYesButton').addEventListener('click', function () {
+    window.location.href = '/reviewSurvey'; // Spring Controller의 매핑된 URL로 이동
+    document.getElementById('modalAbove').style.display = 'none';
+});
+
+// No 버튼 클릭 시 처리
+document.getElementById('modalNoButton').addEventListener('click', function () {
+    alert(`홈으로 이동 구현 예정!`);
+    document.getElementById('modalAbove').style.display = 'none';
+});

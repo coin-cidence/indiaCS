@@ -124,15 +124,15 @@
         <img class="image" src="img/process/image0.png" />
         <div class="star-rating">
             <!-- 1번째 별 -->
-            <img class="star" id="star1" />
+            <img class="star" id="star1" data-value="1"/>
             <!-- 2번째 별 -->
-            <img class="star" id="star2" />
+            <img class="star" id="star2" data-value="2"/>
             <!-- 3번째 별 -->
-            <img class="star" id="star3" />
+            <img class="star" id="star3" data-value="3"/>
             <!-- 4번째 별 -->
-            <img class="star" id="star4" />
+            <img class="star" id="star4" data-value="4"/>
             <!-- 5번째 별 -->
-            <img class="star" id="star5" />
+            <img class="star" id="star5" data-value="5"/>
         </div>
         <div class="comment">
             &quot;How was technician Arjun?&quot;
@@ -143,6 +143,22 @@
     <img class="free-icon-confirm-467129-1" src="img/process/free-icon-confirm-467129-10.png" />
     <div class="your-reservation-has-been-confirmed">Your reservation has been confirmed</div>
 </div>
+
+<!-- 모달창 구현 -->
+<div class="modalAbove" id="modalAbove">
+    <div class="modalWindow">
+        <div class="modalHeader"></div> <!-- 상단바 추가 -->
+        <div class="modalContent">
+            <img class="modal-image" src="img/process/modal-image.png" alt="Comment Icon" />
+            <div class="modal-review-more-text">Review More?</div>
+            <div class="modalButtonContainer">
+                <button class="modalYesButton" id="modalYesButton">Yes</button>
+                <button class="modalNoButton" id="modalNoButton">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- 외부 JS 파일을 불러오는 부분 -->
 <script src="js/process.js"></script>
 </body>
