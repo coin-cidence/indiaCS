@@ -18,31 +18,8 @@ public class UserService {
     AsRequestRepository asRequestRepository;
 
     public boolean checkReservationNumber(String asRequestId) {
-        return asRequestRepository.findByAsRequestId(asRequestId);
+        // Optional을 사용해 실제 데이터가 존재하는지 확인
+        return asRequestRepository.findByAsRequestId(asRequestId).isPresent();
     }
-
-//    public User login(String userId, String password) {
-//        User user = userRepository.login(userId, password);
-//        return user;
-//    }
-//
-//    public User join(User user) throws RuntimeException {
-//
-//        if(user.getUserId().length() > 11) {
-//            throw new RuntimeException("사용자 ID는 최대 10자리입니다.");
-//        }
-//
-//        if(user.getPassword().length() > 11) {
-//            throw new RuntimeException("비밀번호는 최대 10자리입니다.");
-//        }
-//
-//        User joiningUser = userRepository.save(user);
-//        return joiningUser;
-//    }
-//
-//    public User loginCheck(String userId) {
-//        Optional<User> joinedUser = userRepository.findById(userId);
-//        return joinedUser.orElse(null);
-//    }
 
 }
