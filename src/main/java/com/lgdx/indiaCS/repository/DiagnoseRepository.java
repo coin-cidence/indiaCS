@@ -14,4 +14,6 @@ public interface DiagnoseRepository extends JpaRepository<Diagnose , String> {
     @Query("SELECT d FROM Diagnose d WHERE d.diagnoseId = :diagnoseId")
     Optional<Diagnose> findByAsDiagnoseId(@Param("diagnoseId") String diagnoseId);
 
+    @Query("SELECT d FROM Diagnose d WHERE d.asRequestId = :asRequestId")
+    Optional<Diagnose> findByAsRequestId(@Param("asRequestId") String asRequestId);
 }

@@ -69,12 +69,12 @@ buttons.forEach(button => {
 
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
-        progressDate1Text.innerHTML = '2024.09.06 13:30';
+//        progressDate1Text.innerHTML = '2024.09.06 13:30';
         progressText1.innerHTML = 'Service technician visit.';
 
         progressDate2.style.visibility = 'visible';
         progressText2.style.visibility = 'visible';
-        progressDate2Text.innerHTML = '2024.09.06 17:10';
+//        progressDate2Text.innerHTML = '2024.09.06 17:10';
         progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'> HDMI Port Failure</span>.";
         var progressText2Span = document.querySelector('.real-diagnose-content');
         progressText2Span.innerText = " HDMI Port Failure";
@@ -98,12 +98,12 @@ buttons.forEach(button => {
 
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
-        progressDate1Text.innerHTML = '2024.09.09 10:10';
+//        progressDate1Text.innerHTML = '2024.09.09 10:10';
         progressText1.innerHTML = 'Parts order completed. (Parts inventory location: Changwon, South Korea)'
 
         progressDate2.style.visibility = 'visible';
         progressText2.style.visibility = 'visible';
-        progressDate2Text.innerHTML = '2024.09.09 16:20';
+//        progressDate2Text.innerHTML = '2024.09.09 16:20';
         progressText2.innerHTML = 'Parts shipment initiated. <span class="real-diagnose-content"> HDMI Port Failure</span>';
         var progressText2Span = document.querySelector('.real-diagnose-content');
         progressText2Span.innerText = '';

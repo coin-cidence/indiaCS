@@ -14,6 +14,7 @@ public class Diagnose {
     @Id
     @Column(name = "diagnose_id")
     private String diagnoseId;
+    @Column(name = "as_request_id")
     private String asRequestId;
     private String diagnoseContent;
     private Date diagnoseDate;
