@@ -54,4 +54,10 @@ public class MainViewController {
     public String res() {
         return "/reservationAS";
     }
+
+    @GetMapping("/mydevice")
+    public String mydevice() {
+        return "/mydevice";
+    }
+
 }
