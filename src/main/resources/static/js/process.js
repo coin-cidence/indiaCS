@@ -44,6 +44,29 @@ background.style.visibility = 'hidden';
 rating.style.visibility = 'hidden';
 rectangle.style.visibility = 'visible';
 
+// 버튼 상태 업데이트 함수
+function updateButtonStates() {
+    // temp 값이 공백인지에 따라 버튼 활성화/비활성화
+    buttons.forEach(button => {
+        if (!temp1) {
+            // temp1이 공백이면 첫 번째 버튼 제외 비활성화
+            button.disabled = (button.id !== 'ellipseButton2');
+        } else if (!temp2) {
+            // temp2가 공백이면 첫 번째 버튼만 활성화
+            button.disabled = (button.id !== 'ellipseButton2');
+        } else if (!temp3) {
+            // temp3이 공백이면 마지막 버튼만 비활성화
+            button.disabled = (button.id === 'ellipseButton4');
+        } else {
+            // 모든 temp 값이 공백이 아니면 모든 버튼 활성화
+            button.disabled = false;
+        }
+    });
+}
+
+// 초기 상태 설정
+updateButtonStates();
+
 buttons.forEach(button => {
   button.addEventListener('click', function() {
     // 모든 버튼의 clicked 클래스를 제거하여 색상을 기본 상태로 되돌림
@@ -70,14 +93,22 @@ buttons.forEach(button => {
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
 //        progressDate1Text.innerHTML = '2024.09.06 13:30';
+        progressDate1Text.innerHTML = temp1;
         progressText1.innerHTML = 'Service technician visit.';
 
-        progressDate2.style.visibility = 'visible';
-        progressText2.style.visibility = 'visible';
+        if(temp2!=""){
+            progressDate2.style.visibility = 'visible';
+            progressText2.style.visibility = 'visible';
+            progressDate2Text.innerHTML = temp2;
+            progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'> HDMI Port Failure</span>.";
+            var progressText2Span = document.querySelector('.real-diagnose-content');
+            progressText2Span.innerText = " HDMI Port Failure";
+        }else{
+            progressDate2.style.visibility = 'hidden';
+            progressText2.style.visibility = 'hidden';
+        }
 //        progressDate2Text.innerHTML = '2024.09.06 17:10';
-        progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'> HDMI Port Failure</span>.";
-        var progressText2Span = document.querySelector('.real-diagnose-content');
-        progressText2Span.innerText = " HDMI Port Failure";
+
 
         progressDate3.style.visibility = 'hidden';
         progressText3.style.visibility = 'hidden';
@@ -99,6 +130,7 @@ buttons.forEach(button => {
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
 //        progressDate1Text.innerHTML = '2024.09.09 10:10';
+        progressDate1Text.innerHTML = temp3;
         progressText1.innerHTML = 'Parts order completed. (Parts inventory location: Changwon, South Korea)'
 
         progressDate2.style.visibility = 'visible';

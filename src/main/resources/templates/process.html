@@ -88,12 +88,12 @@
         <div class="diagnostic-progress">Diagnostic Progress</div>
         <div class="complete-diagnose-1">
             <img class="appointment-icon-1" src="img/process/free-icon-appointment-7322293-10.png">
-            <div class="complete-time-1" th:text="${date1}"></div>
+            <div class="complete-time-1"></div>
 <!--            <div class="complete-time-1">2024.09.06 13:30</div>-->
         </div>
         <div class="complete-diagnose-2">
             <img class="appointment-icon-2" src="img/process/free-icon-appointment-7322293-10.png">
-            <div class="complete-time-2" th:text="${date2}"></div>
+            <div class="complete-time-2"></div>
 <!--            <div class="complete-time-2">2024.09.06 17:10</div>-->
         </div>
         <div class="complete-diagnose-3">
@@ -162,7 +162,13 @@
         </div>
     </div>
 </div>
-
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    let temp1 = [[${date1}]]
+    let temp2=[[${date2}]]
+    let temp3=[[${date3}]]
+    /*]]>*/
+</script>
 <!-- 외부 JS 파일을 불러오는 부분 -->
 <script src="js/process.js"></script>
 </body>

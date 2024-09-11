@@ -14,6 +14,7 @@ public class Repair {
     @Id
     @Column(name = "repair_id")
     private String repairId;
+    @Column(name = "diagnose_id")
     private String diagnoseId;
     private int repairState;
     private Date repairDate;

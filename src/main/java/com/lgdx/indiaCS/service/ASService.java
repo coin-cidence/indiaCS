@@ -31,7 +31,7 @@ public class ASService {
         return diagnoseRepository.findByAsRequestId(asRequestId);
     }
 
-    public Optional<Repair> repairInfo(String repairId) {
-        return repairRepository.findByRepairId(repairId);
+    public Optional<Repair> repairInfo(String diagnoseId) {
+        return repairRepository.findByAsDiagnoseId(diagnoseId);
     }
 }
