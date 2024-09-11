@@ -31,4 +31,9 @@ public class MainViewController {
     public String deviceSelection() {
         return "/deviceSelection";
     }
+
+    @GetMapping("/deviceSelectionInstall")
+    public String deviceSelectionInstall() {
+        return "/deviceSelectionInstall";
+    }
 }
