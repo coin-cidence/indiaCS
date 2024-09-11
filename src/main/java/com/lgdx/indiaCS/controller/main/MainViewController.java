@@ -27,11 +27,6 @@ public class MainViewController {
         return "/login";
     }
 
-    @PostMapping("/login-process")
-    public String loginProcess(){
-        return "/Installation_AS(mypage)";
-    }
-
     @GetMapping("/deviceSelection")
     public String deviceSelection() {
         return "/deviceSelection";
