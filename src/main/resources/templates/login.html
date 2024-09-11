@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Reservation Check</title>
-    <!--    <link rel="stylesheet" href="../css/login.css">-->
-    <link rel="stylesheet" href="css/reservationCheckStyle.css">
-<!--    <link rel="stylesheet" href="loginMe.css">-->
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginMe.css">
+    <link rel="stylesheet" href="css/installationASStyle.css">
     <style>
         a,
         button,
@@ -48,7 +47,7 @@
             <div class="logo">
                 <img
                         class="lg_logo"
-                        src="img/reviewSurvey/lge-logo-en-heritage-red-grey-20.png"
+                        src="img/login/lge_logo_en_heritage_red_grey%202.png"
                 />
                 <div class="lg_text">LG</div>
             </div>
@@ -76,32 +75,41 @@
             </div>
         </div>
     </div>
-    <img class="layoutImg" src="img/reservationCheck/LG_Electronics_Gradient_01_RGB 3.png">
+    <img class="layoutImg" src="img/login/LG_Electronics_Gradient_01_RGB 3.png">
     <div id="layoutAuthentication_content">
         <main>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header">
-                                <h1 class="text-center font-weight-light my-4">✅Reservation</h1>
-                            </div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Log in</h3></div>
                             <pre>
-
+                                
                             </pre>
                             <div class="card-body">
-                                <form action="/reservation-check" method="post" id="reservationForm">
+                                <form action="/login-process" method="post">
                                     <div class="form-floating mb-3">
-                                        <label for="reservationNumber">Reservation Number</label>
-                                        <input class="form-control" id="reservationNumber" name="reservationNumber" type="text" placeholder="asr000" required />
+                                        <label for="inputUserId">ID</label>
+                                        <input class="form-control" id="inputUserId" name="userId" type="userId" placeholder="user000" />
                                     </div>
+                                    <div class="form-floating mb-3">
+                                        <label for="inputPassword">PW</label>
+                                        <input class="form-control" id="inputPassword" name="password" type="password" placeholder="pass000" />
+                                        
+                                    </div>
+                                    <button class="card-footer text-center py-3">
+                                        <div class="small"><a href="/register">Forget password?</a></div>
+                                    </button>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0" id="logButton">
-                                        <button class="btn btn-primary" type="submit">Check</button>
-<!--                                        <p><span th:text="${error}"></span></p>-->
+                                        <button class="btn btn-primary" type="submit">Log in</button>
+                                        <p><span th:text="${error}"></span></p>
+                                    </div>
+                                    <div class="socialIcon">
+                                        <button><img src="img/login/facebook_logo.png"></button>
+                                        <button><img src="img/login/apple_logo.png"></button>
+                                        <button><img src="img/login/google_logo.png"></button>
                                     </div>
                                 </form>
-                                <!-- Error message placeholder -->
-                                <p id="errorMessage" class="error-message" th:text="${error}"></p>
                             </div>
                         </div>
                     </div>
@@ -109,6 +117,8 @@
             </div>
         </main>
     </div>
+
 </div>
+<!--<script src="user.js"></script>-->
 </body>
 </html>

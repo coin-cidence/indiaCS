@@ -1,0 +1,227 @@
+
+.vector {
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  overflow: visible;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: row;
+
+}
+.logo {
+  width: 10%;
+  height: 100%;
+  position: static;
+  display: flex;
+  padding-left:20px;
+  align-items: center;
+  justify-content: center;
+}
+.lg_logo {
+  height: 100%;
+  object-fit:contain;
+  align-items:center;
+}
+.lg_text {
+  color: #545454;
+  text-align: left;
+  font-family: "LgEiHeadlineTtf-Bold", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  align-items: center;
+}
+.menus {
+  width:65%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left:30px;
+  padding-right:30px;
+  align-items: center;
+  font-weight: 600;
+}
+.menu {
+  font-size: medium;
+}
+.buttons {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left:70px;
+  padding-right:20px;
+  align-items: center;
+  font-weight: 600;
+
+}
+.button {
+  font-size: medium;
+  border: 1px solid #000; /* 테두리 색상과 두께 */
+  padding: 5px 10px; /* 버튼 내부 여백 */
+  border-radius: 10px; /* 모서리 둥글게 */
+
+}
+.contact-us {
+  color: #545454;
+  text-align: center;
+  font-family: "LgEiHeadlineVf-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  right: 6.2%;
+  left: 85.37%;
+  width: 8.42%;
+  bottom: 96.73%;
+  top: 1.57%;
+  height: 1.7%;
+}
+
+.lan {
+  font-size: medium;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.home-content{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position : absolute;
+  top: 0%;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lIG {
+  top: 1.25%;
+  width: 10px;
+  right: 56%;
+  position: absolute;
+  display: flex;
+  padding-left:950px;
+  padding-top:200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lifeIsGood {
+  position: absolute;
+  left: 80.3%;
+  width: 500px;
+  object-fit:contain;
+  align-items:center;
+}
+
+.button-inas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-install .installation{
+  width: 300px;
+  height: 300px;
+  right: 56%;
+  top: 40%;
+  position: absolute;
+  background: #A50534;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "LgEiHeadlineVf-Regular", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button-as .AS{
+  width: 300px;
+  height: 300px;
+  right: 30%;
+  top: 40%;
+  position: absolute;
+  background: #F0ECE4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #545454;
+  font-family: "LgEiHeadlineVf-Regular", sans-serif;
+  font-size: 30px;
+  weight: 400;
+  cursor: pointer;
+}
+
+.button-login .loginButton{
+  padding: 10px 20px;
+  border-radius: 20%;
+  color: #545454;
+  text-align: center;
+  font-family: "LgEiHeadlineVf-Regular", sans-serif;
+  position: absolute;
+  right: 50.1%;
+  top: 80%;
+  height: 300vx;
+  border: none;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px; /* 모서리를 둥글게 */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .button-myPage .myPageButton{
+ padding: 10px 20px;
+ border-radius: 20%;
+ color: #545454;
+ text-align: center;
+ font-family: "LgEiHeadlineVf-Regular", sans-serif;
+ position: absolute;
+ right: 49.5%;
+ top: 80%;
+ height: 300vx;
+ border: none;
+ background: white;
+ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+ border-radius: 15px; /* 모서리를 둥글게 */
+ font-size: 16px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+
+/* Optional: Hover effect */
+.button-install .installation:hover {
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-as .AS:hover {
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-login .loginButton:hover {
+    background: #3498db;
+    color: white;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-myPage .myPageButton:hover {
+background: #3498db;
+color: white;
+box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+

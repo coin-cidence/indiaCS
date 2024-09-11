@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./vars.css"> -->
+  <link rel="stylesheet" href="css/deviceSelectionStyle.css">
+  <style>
+    a, button, input, select, h1, h2, h3, h4, h5, * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      background: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    menu, ol, ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    /* 기본적으로 chevron-down은 아래쪽을 향해 있음 */
+    .chevron-down,
+    .chevron-down2,
+    .chevron-down3 {
+      transition: transform 0.3s ease;
+    }
+
+    /* 아코디언이 활성화되면 chevron-down 아이콘을 위로 회전 */
+    .accordion-item.active .chevron-down,
+    .accordion-item2.active .chevron-down2,
+    .accordion-item3.active .chevron-down3 {
+      transform: rotate(180deg); /* 180도 회전 */
+    }
+
+    /* Hide input field when not needed */
+    .accordion-title input[type="text"] {
+      display: none;
+    }
+
+    /* .accordion-item.active .accordion-title input[type="text"] {
+      display: block;
+    } */
+
+    /* Styling for dropdown */
+    .accordion-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .accordion-content li {
+      padding: 5px 0;
+    }
+
+    .accordion-content li:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Responsive styles
+    @media (max-width: 768px) {
+      .accordion-content {
+        padding: 5px;
+      }
+    }
+
+    /* Responsive styles */
+    /* @media (max-width: 768px) {
+      ._6-device-selection-a-s {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .menus {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu, .menu-2, .menu-3, .menu-4 {
+        margin-bottom: 10px;
+  }  
+    }*/
+
+  </style>
+  <title>Device Selection</title>
+</head>
+<body>
+  <div class="div">
+    <div class="vector">
+      <div class="logo">
+        <img
+          class="lg_logo"
+          src="img/deviceSelection/lge-logo-en-heritage-red-grey-20.png"
+        />
+        <div class="lg_text">LG</div>
+      </div>
+      <div class="menus">
+        <div class="menu">
+          TV/Audio/Video
+        </div>
+        <div class="menu">
+          Home Appliances
+        </div>
+        <div class="menu">
+          Air Solutions
+        </div>
+        <div class="menu">
+          Computing
+        </div>
+      </div>
+      <div class="buttons">
+        <select class="lan">
+          <option class="text">English</option>
+        </select>
+        <div class="button">
+          Contact Us
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="page-accordion">
+      <div class="text-content-heading">
+        <div class="heading">What is your Device?</div>
+      </div>
+
+      <div class="accordion">
+        
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <div class="title">Product Line</div>
+            <input type="text" id="title_list1" list="PL" placeholder="">
+            <datalist id="PL">
+              <option value="TV">TVs</option>
+              <option value="Refrigerators">Refrigerators</option>
+              <option value="Air Conditioners">Air Conditioners</option>
+              <option value="Washing Machine">Washing Machine</option>
+            </datalist>
+            <img class="chevron-down" src="img/deviceSelection/chevron-down0.svg" />
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>TVs</li>
+              <li>Refrigerators</li>
+              <li>Air Conditioners</li>
+              <li>Washing Machine</li>
+            </ul>
+          </div>
+        </div>
+        
+
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <div class="title">Category</div>
+            <input type="text" id="title_list2" list="PN" placeholder="">
+            <datalist id="PN">
+              <option value="UHD">4K UHD TVs</option>
+              <option value="QNED">QNED</option>
+              <option value="OLED">OLED</option>
+              <option value="SmartTVs">Smart TVs</option>
+              <option value="Others">Others</option>
+            </datalist>
+            <img class="chevron-down2" src="img/deviceSelection/chevron-down1.svg" />
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>4K UHD TVs</li>
+              <li>QNED</li>
+              <li>OLED</li>
+              <li>Smart TVs</li>
+              <li>Others</li>
+            </ul>
+          </div> 
+          
+        </div>
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <div class="title">Serial Number</div>
+            <input type="text" id="title_list3" list="SN" placeholder="">
+            <datalist id="SN">
+              <option value="32LQ570BPSA.ATR">32LQ570BPSA.ATR</option>
+              <option value="32LQ573BPSA.ATR">32LQ573BPSA.ATR</option>
+              <option value="32LQ635BPSA.ATR">32LQ635BPSA.ATR</option>
+              <option value="32LQ640BPTA.ATR">32LQ640BPTA.ATR</option>
+              <option value="32LR656BPSA.ATR">32LR656BPSA.ATR</option>
+              <option value="32LR656BPSA.ATR">32LR656BPSA.ATR</option>
+            </datalist> 
+            <img class="chevron-down3" src="img/deviceSelection/chevron-down2.svg" />
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>32LQ570BPSA.ATR</li>
+              <li>32LQ573BPSA.ATR</li>
+              <li>32LQ635BPSA.ATR</li>
+              <li>32LQ640BPTA.ATR</li>
+              <li>32LR656BPSA.ATR</li>
+              <li>32LR656BPSA.ATR</li>
+            </ul>
+          </div> 
+
+        </div>
+      </div>
+      <footer>
+        <a href="/process" class="registration-link" id="myRegistration">My Registration</a>
+      </footer>
+    
+    </div>
+
+    <!-- Updated search section -->
+    <!-- <div class="search">
+      <input type="text" id="model-number" class="model-number-input" placeholder="Please type model number">
+      <img class="group-2384752" src="group-2384751.svg" />
+      <button class="search-button" onclick="saveModelNumber()">
+        <img class="group-2384752" src="group-2384751.svg" />  
+      </button>
+    </div> -->
+    <button class="arrow-button" onclick="arrowClickAction()" id="arrow-button">
+      <img class="arrow-left-circle" src="img/deviceSelection/arrow-left-circle0.svg"  />
+    </button>
+  </div>
+
+  <script src="js/deviceSelection.js"></script>
+</body>
+</html>

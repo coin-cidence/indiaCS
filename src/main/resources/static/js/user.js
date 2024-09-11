@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 
-    userIdInput.addEventListener("input", function() {
-        // 사용자 입력 중에 아이디 검사가 필요하기 때문에 버튼을 비활성화
-        isUserIdValid = false;
-        registerButton.disabled = true;
-    });
+//    userIdInput.addEventListener("input", function() {
+//        // 사용자 입력 중에 아이디 검사가 필요하기 때문에 버튼을 비활성화
+//        isUserIdValid = false;
+//        registerButton.disabled = true;
+//    });
 });

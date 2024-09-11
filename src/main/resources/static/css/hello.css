@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Hello {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #FFFEFB;
+}
+
+.NavigationBar {
+    width: 25vw;
+    height: auto;
+    left: 1vw;
+    top: 1vh;
+    position: absolute;
+}
+
+.Group238441 {
+    display: flex;
+    align-items: center;
+}
+
+.LgeLogoEnHeritageRedGrey2 {
+    width: 3vw;
+    height: auto;
+}
+
+.LgCustomerService {
+    color: #545454;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: 'LG EI Headline TTF';
+    font-weight: 700;
+    white-space: nowrap;
+    margin-left: 0.5vw;
+}
+
+.LgeSloganHorizontalMonoActiveRed1 {
+    width: 25vw;
+    height: auto;
+    left: 1vw;
+    top: 8vh;
+    position: absolute;
+}
+
+.Rectangle3088 {
+    width: 100vw;
+    height: 52vh;
+    top: 20vh;
+    position: absolute;
+}
+
+.HelloIndia {
+    left: 49%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: 'LG EI Headline TTF';
+    font-weight: 700;
+    white-space: nowrap;
+    top: 28vh;
+    font-size: 6vw;
+}
+
+.NamasteBharat {
+    left: 49%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: 'LG EI Headline TTF';
+    font-weight: 700;
+    white-space: nowrap;
+    top: 44vh;
+    font-size: 4vw;
+}
+
+.Language {
+    left: 48.5%;
+    top: 73vh;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+    font-family: 'LG EI Text TTF';
+    font-weight: 600;
+}
+
+.LanguageHindi {
+    left: 48.5%;
+    top: 77vh;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+    font-family: 'LG EI Text TTF';
+    font-weight: 400;
+}
+
+
+
+.SegmentedButton {
+    width: 10%;
+    height: 10%;
+    left: 48.4%;
+    top: 85vh;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SegmentStart,
+.SegmentEnd {
+    flex: 1 1 0;
+    padding: 1vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container {
+    flex: 1 1 0;
+    background: #FFFFFF;
+    border: 1px #545454 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#englishButton {
+    background: #D4D4D4;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#hindiButton {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.StateLayer {
+    padding: 1vh 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LabelText {
+    text-align: center;
+    color: #1B1B1B;
+    font-size: 1vw;
+    font-family: 'LG EI Text TTF';
+    font-weight: 500;
+    background-color: none;
+}
+
+.language-option {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.language-option .checkmark {
+    margin-right: 10px;
+    font-size: 16px;
+    display: none;
+}
+
+.language-option.selected .checkmark {
+    display: inline;
+}
+
+/* #hindiButton:hover {
+    background-color: #D4D4D4;
+}
+
+#hindiButton:hover #englishButton .Container {
+    background-color: #FFFFFF;
+}
+    
+#hindiButton:hover .language-option.hindi .checkmark {
+    display: inline;
+}
+ */
