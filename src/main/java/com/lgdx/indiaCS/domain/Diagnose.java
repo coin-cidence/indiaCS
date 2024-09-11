@@ -51,4 +51,14 @@ public class Diagnose {
     public void setDiagnoseDate(Date diagnoseDate) {
         this.diagnoseDate = diagnoseDate;
     }
+
+    @Override
+    public String toString() {
+        return "Diagnose{" +
+                "diagnoseId='" + diagnoseId + '\'' +
+                ", asRequestId='" + asRequestId + '\'' +
+                ", diagnoseContent='" + diagnoseContent + '\'' +
+                ", diagnoseDate=" + diagnoseDate +
+                '}';
+    }
 }

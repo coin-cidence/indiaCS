@@ -17,6 +17,7 @@ public class Repair {
     private String diagnoseId;
     private int repairState;
     private Date repairDate;
+    private String repairPartInventory;
 
     public Repair() {}
 
@@ -50,5 +51,13 @@ public class Repair {
 
     public void setRepairDate(Date repairDate) {
         this.repairDate = repairDate;
+    }
+
+    public String getRepairPartInventory() {
+        return repairPartInventory;
+    }
+
+    public void setRepairPartInventory(String repairPartInventory) {
+        this.repairPartInventory = repairPartInventory;
     }
 }

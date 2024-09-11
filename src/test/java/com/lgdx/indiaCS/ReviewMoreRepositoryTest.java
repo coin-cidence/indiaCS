@@ -33,9 +33,9 @@ public class ReviewMoreRepositoryTest {
         // Date로 날짜를 설정
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            Date asRequestDate = formatter.parse("2024-10-10");
+            Date asRequestDate = new Date();
             asRequest.setAsRequestDate(asRequestDate);
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -58,11 +58,14 @@ public class ReviewMoreRepositoryTest {
         // Date로 날짜를 설정
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            Date reviewDate = formatter.parse("2024-10-21");
+            // 시스템 현재 날짜를 가져옵니다.
+            Date reviewDate = new Date();
+            // reviewMore 객체에 현재 날짜를 설정합니다.
             reviewMore.setReviewDate(reviewDate);
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
 
         reviewMoreRepository.save(reviewMore);
     }
