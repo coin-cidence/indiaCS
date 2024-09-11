@@ -51,4 +51,14 @@ public class AsRequest {
     public void setAsRequestCenter(String asRequestCenter) {
         this.asRequestCenter = asRequestCenter;
     }
+
+    @Override
+    public String toString() {
+        return "AsRequest{" +
+                "asRequestId='" + asRequestId + '\'' +
+                ", productId='" + productId + '\'' +
+                ", asRequestDate=" + asRequestDate +
+                ", asRequestCenter='" + asRequestCenter + '\'' +
+                '}';
+    }
 }

@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        const reservationNumber = document.getElementById("reservationNumber").value;
+        const asRequestId = document.getElementById("asRequestId").value;
 
         // Basic validation
-        if (reservationNumber === "") {
+        if (asRequestId === "") {
             errorMessageElement.innerText = "Please enter a reservation number.";
             return;
         }
@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ reservationNumber: reservationNumber }),
+            body: JSON.stringify({ "asRequestId" : asRequestId }),
         })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
                     // Redirect to the next page or perform success action
-                    window.location.href = "/next-page"; // Change to your actual URL
+                    window.location.href = "/process"; // Change to your actual URL
                 } else {
                     // Display error message if reservation not found
                     errorMessageElement.innerText = "Reservation number not found. Please try again.";

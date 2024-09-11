@@ -16,7 +16,6 @@ import java.util.Date;
 public class ReviewMoreRepositoryTest {
 
     ReviewMoreRepository reviewMoreRepository;
-//    AsRequestRepository asRequestRepository;
 
     @Autowired
     public ReviewMoreRepositoryTest( ReviewMoreRepository reviewMoreRepository ) { this.reviewMoreRepository = reviewMoreRepository; }

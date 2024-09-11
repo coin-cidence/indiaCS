@@ -13,23 +13,7 @@ import java.util.Map;
 @RestController
 public class UserDataController {
 
-    @Autowired
-    UserService userService;
 
-    @PostMapping("/reservation-check")
-    public ResponseEntity<Map<String, Object>> checkReservation(@RequestBody Map<String, String> requestBody) {
-        String asRequestId = requestBody.get("asRequestId");
-        boolean find = userService.checkReservationNumber(asRequestId);
-
-        Map<String, Object> response = new HashMap<>();
-        if (find) {
-            response.put("success", true);
-            return ResponseEntity.ok(response);
-        } else {
-            response.put("success", false);
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-        }
-    }
 
 //    @GetMapping("/checkUserId")
 //    public boolean checkUserId(@RequestParam("userId") String userId) {
