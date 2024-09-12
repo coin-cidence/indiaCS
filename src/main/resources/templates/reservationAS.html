@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -127,10 +127,15 @@
         </div>
         <div class="confirm">
           <div class="confirm-text">Confirm Your Reservation</div>
-          <button class="confirm-btn" type="submit">YES!</button>
+          <button class="confirm-btn" type="submit" id="yes">YES!</button>
         </div>
       </div>
     </div>
+    <script>
+        document.getElementById('yes').addEventListener('click', function () {
+        window.location.href = '/reservationComplete'; // 올바른 경로로 이동
+        });
+    </script>
 <script src="js/reservationAS.js"></script>
 </body>
 </html>

@@ -1,9 +1,10 @@
+
 const dateInput = document.getElementById('date-input');
 const daysContainer = document.getElementById('days');
 const monthYearDisplay = document.getElementById('month-year');
 let selectedDate;
 let currentMonth = new Date().getMonth();
-let currentYear = new Date().getFullYear();
+let currentYear = new Date( .getFullYear();
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -69,3 +70,4 @@ timeButtons.forEach(button => {
     this.classList.add('selected');
   });
 });
+

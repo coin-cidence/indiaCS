@@ -60,4 +60,6 @@ public class MainViewController {
         return "/mydevice";
     }
 
+    @GetMapping("/reservationComplete")
+    public String reservationComplete(){return "/reservationComplete";}
 }

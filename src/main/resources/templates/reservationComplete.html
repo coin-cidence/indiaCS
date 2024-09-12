@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reservationCompleteStyle.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="div">
+    <div class="vector">
+      <div class="logo">
+        <img
+          class="lg_logo"
+          src="img/reservationComplete/lge-logo-en-heritage-red-grey-20.png"
+        />
+        <div class="lg_text">LG</div>
+      </div>
+      <div class="menus">
+        <div class="menu">
+          TV/Audio/Video
+        </div>
+        <div class="menu">
+          Home Appliances
+        </div>
+        <div class="menu">
+          Air Solutions
+        </div>
+        <div class="menu">
+          Computing
+        </div>
+      </div>
+      <div class="buttons">
+        <select class="lan">
+          <option class="text">English</option>
+        </select>
+        <div class="button">
+          Contact Us
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <img class="background" src="img/reservationComplete/_23-review-complete.png">
+      <div class="text">
+        <div class="text-head">Reservation Complete !</div>
+        <br>
+        <div class="text-tail">Your Reservation No.
+          <!-- 아래 id=text-no가 바뀌어야할 접수번호입니다. 
+          타임리프 이용해서 쏼ㄹㅏ쏼라 하면 될걸요...?아마도ㅠ-->
+        <div class="text-tail" id="text-no">&nbspAB54CXQRT</div>
+        
+      </div>
+      </div>      
+      <div>
+        <img class="biglglogo" src="img/reservationComplete/lge-logo-en-heritage-red-grey-30.png" id="goToHome">
+      </div>
+    </div>
+  </div>
+<script src="js/reservationComplete.js"></script>
+</body>
+</html>
