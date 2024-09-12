@@ -110,17 +110,18 @@ INTO AS_Request (as_request_id, product_id, as_request_date, as_request_center) 
 INTO AS_Request (as_request_id, product_id, as_request_date, as_request_center) VALUES ('asr009', 'prod009', TO_DATE('2024-08-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'D')
 INTO AS_Request (as_request_id, product_id, as_request_date, as_request_center) VALUES ('asr010', 'prod010', TO_DATE('2024-08-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'A')
 
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag000', 'asr000', 'TV 화면 멈춤 현상', TO_DATE('2024-08-16 12:07', 'YYYY-MM-DD HH24:MI'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag001', 'asr001', '냉장고 냉동 기능 이상', TO_DATE('2024-09-02 20:48', 'YYYY-MM-DD HH24:MI'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag002', 'asr002', '세탁기 탈수 소음 발생', TO_DATE('2024-09-08 15:09:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag003', 'asr003', 'TV 화면 깜빡임 현상', TO_DATE('2024-09-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag004', 'asr004', '에어컨 냉방 불량', TO_DATE('2024-08-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag005', 'asr005', '냉장고 문 닫힘 문제', TO_DATE('2024-08-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag006', 'asr006', 'TV 전원 불량', TO_DATE('2024-09-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag007', 'asr007', '에어컨 소음 발생', TO_DATE('2024-08-25 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag008', 'asr008', '세탁기 물이 새는 문제', TO_DATE('2024-09-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag009', 'asr009', '냉장고 온도 조절 문제', TO_DATE('2024-08-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
-INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag010', 'asr010', 'TV 화면 멈춤 현상', TO_DATE('2024-08-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag000', 'asr000', 'TV Screen Freezing Issue', TO_DATE('2024-08-16 12:07', 'YYYY-MM-DD HH24:MI'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag001', 'asr001', 'Refrigerator Freezing Function Issue', TO_DATE('2024-09-02 20:48', 'YYYY-MM-DD HH24:MI'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag002', 'asr002', 'Washing Machine Noise During Spin', TO_DATE('2024-09-08 15:09:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag003', 'asr003', 'TV Screen Flickering Issue', TO_DATE('2024-09-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag004', 'asr004', 'Air Conditioner Cooling Failure', TO_DATE('2024-08-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag005', 'asr005', 'Refrigerator Door Closing Issue', TO_DATE('2024-08-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag006', 'asr006', 'TV Power Failure', TO_DATE('2024-09-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag007', 'asr007', 'Air Conditioner Noise Issue', TO_DATE('2024-08-25 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag008', 'asr008', 'Washing Machine Leaking Water Issue', TO_DATE('2024-09-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag009', 'asr009', 'Refrigerator Temperature Control Issue', TO_DATE('2024-08-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+INTO Diagnose (diagnose_id, as_request_id, diagnose_content, diagnose_date) VALUES ('diag010', 'asr010', 'TV Screen Freezing Issue', TO_DATE('2024-08-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+
 
 INTO Repair (repair_id, diagnose_id, repair_state, repair_date, repair_part_inventory) VALUES ('rep001', 'diag000', 1, TO_DATE('2024-08-17 09:03:00', 'YYYY-MM-DD HH24:MI:SS'), 'Incheon, South Korea')
 INTO Repair (repair_id, diagnose_id, repair_state, repair_date, repair_part_inventory) VALUES ('rep002', 'diag000', 2, TO_DATE('2024-08-19 18:41:00', 'YYYY-MM-DD HH24:MI:SS'), null)
@@ -160,16 +161,17 @@ INTO Review (as_request_id, technician_id, review_rating, review_date) VALUES ('
 INTO Review (as_request_id, technician_id, review_rating, review_date) VALUES ('asr009', 'tech009', 5, TO_DATE('2024-08-23', 'YYYY-MM-DD'))
 INTO Review (as_request_id, technician_id, review_rating, review_date) VALUES ('asr010', 'tech010', 4, TO_DATE('2024-08-18', 'YYYY-MM-DD'))
 
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr000', 2, 2, 3, '수리는 잘 되었지만 시간이 조금 걸렸습니다.', TO_DATE('2024-10-01', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr001', 1, 1, 1, '서비스가 아주 훌륭했습니다!', TO_DATE('2024-09-29', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr003', 2, 3, 3, '보통이었습니다.', TO_DATE('2024-09-08', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr004', 1, 1, 1, '기사님이 매우 친절하고 수리도 빠르게 완료되었습니다!', TO_DATE('2024-08-23', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr005', 2, 2, 3, '기사님이 친절하셨습니다.', TO_DATE('2024-08-18', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr006', 1, 1, 1, '기사님이 매우 친절하시고 작업도 신속했습니다.', TO_DATE('2024-09-04', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr007', 3, 3, 2, '대체적으로 만족스러웠습니다.', TO_DATE('2024-08-28', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr008', 2, 3, 4, '약간의 불편함이 있었습니다.', TO_DATE('2024-09-08', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr009', 1, 1, 1, '최고의 서비스를 받았습니다!', TO_DATE('2024-08-23', 'YYYY-MM-DD'))
-INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr010', 2, 2, 3, '수리는 잘 되었지만 시간이 조금 걸렸습니다.', TO_DATE('2024-08-18', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr000', 2, 2, 3, 'The repair was done well, but it took a bit of time.', TO_DATE('2024-10-01', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr001', 1, 1, 1, 'The service was excellent!', TO_DATE('2024-09-29', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr003', 2, 3, 3, 'It was average.', TO_DATE('2024-09-08', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr004', 1, 1, 1, 'The technician was very friendly and the repair was completed quickly!', TO_DATE('2024-08-23', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr005', 2, 2, 3, 'The technician was friendly.', TO_DATE('2024-08-18', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr006', 1, 1, 1, 'The technician was very friendly and the work was done promptly.', TO_DATE('2024-09-04', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr007', 3, 3, 2, 'Overall, I was satisfied.', TO_DATE('2024-08-28', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr008', 2, 3, 4, 'There were some inconveniences.', TO_DATE('2024-09-08', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr009', 1, 1, 1, 'I received the best service!', TO_DATE('2024-08-23', 'YYYY-MM-DD'))
+INTO Review_more (as_request_id, question1, question2, question3, review_comment, review_date) VALUES ('asr010', 2, 2, 3, 'The repair was done well, but it took a bit of time.', TO_DATE('2024-08-18', 'YYYY-MM-DD'))
+
 SELECT * FROM DUAL;
 
 SELECT * FROM REVIEW;
@@ -180,24 +182,14 @@ SELECT * FROM PRODUCT;
 SELECT * FROM AS_REQUEST;
 SELECT * FROM DIAGNOSE;
 SELECT * FROM REPAIR;
+
 --
 ALTER TABLE Review_more
 DROP CONSTRAINT fk_review_more_as_request;
 
-<<<<<<< HEAD
-DROP TABLE REVIEW;
-DROP TABLE TECHNICIAN;
-DROP TABLE REVIEW_MORE;
-DROP TABLE PRODUCT;
-DROP TABLE REPAIR;
-DROP TABLE "User";
-DROP TABLE Diagnose;
-DROP TABLE AS_REQUEST;
-=======
 ALTER TABLE Review
 DROP CONSTRAINT fk_review_as_request
 DROP CONSTRAINT fk_review_technician;
->>>>>>> 0054b0771a3d9428c0757286ac1b45653532aa08
 
 ALTER TABLE Repair
 DROP CONSTRAINT fk_repair_diagnose;
@@ -212,20 +204,11 @@ ALTER TABLE PRODUCT
 DROP CONSTRAINT fk_product_user;
 
 DROP TABLE REVIEW;
-DROP TABLE REVIEW_MORE;
 DROP TABLE TECHNICIAN;
-DROP TABLE REPAIR;
+DROP TABLE REVIEW_MORE;
 DROP TABLE PRODUCT;
-DROP TABLE Diagnose;
+DROP TABLE REPAIR;
 DROP TABLE "User";
+DROP TABLE Diagnose;
 DROP TABLE AS_REQUEST;
 --
-
-
---select u.user_id, a.as_request_id
---from "User" u, Product p, AS_request a
---where u.user_id = p.user_id
---and a.product_id=p.product_id;
-
---insert INTO AS_Request (as_request_id, as_request_date, as_request_center) VALUES ('asr000', TO_DATE('2024-08-20', 'YYYY-MM-DD'), 'D');
---insert INTO AS_Request (as_request_id, as_request_date, as_request_center) VALUES ('asr000', TO_DATE('2024-08-20', 'YYYY-MM-DD'), 'D');

@@ -61,3 +61,40 @@ allItems.forEach(item => {
   }
 });
 }
+
+// 총 아코디언 항목의 개수
+const totalOptions = 3;
+
+function toggleAccordion(element) {
+    // 클릭된 아코디언 항목의 상태를 토글
+    const clickedItem = element;
+    clickedItem.classList.toggle('active');
+
+    // 클릭된 아코디언 항목 내의 li 요소들
+    const liItems = clickedItem.querySelectorAll('.accordion-content li');
+
+    liItems.forEach((li) => {
+        li.addEventListener('click', function (event) {
+            event.stopPropagation(); // 부모 요소로 이벤트 전파 방지
+
+            // 모든 li에서 'selected' 클래스를 제거
+            liItems.forEach((item) => item.classList.remove('selected'));
+
+            // 클릭한 li에 'selected' 클래스 추가
+            li.classList.add('selected');
+
+            // 모든 항목이 선택되었는지 확인
+            checkAllOptionsSelected();
+        });
+    });
+}
+
+function checkAllOptionsSelected() {
+    // 'selected' 클래스를 가진 아코디언 항목의 수를 셈
+    const selectedItems = document.querySelectorAll('.accordion-content li.selected').length;
+
+    if (selectedItems >= totalOptions) {
+        // 모든 항목이 선택되면 페이지 이동
+        window.location.href = '/diagnose1'; // 실제 URL로 교체
+    }
+}
