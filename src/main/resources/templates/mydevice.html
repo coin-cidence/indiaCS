@@ -80,7 +80,7 @@
                     <div class="p-detail-stat">802RMJA298456</div>
                     <div class="p-detail-stat", id="special">
                       <span id="nextpage">Under Repair</span></div>
-                    <div class="p-detail-stat">2024.08.09 - 2025.08.09</div>
+                    <div class="p-detail-stat">2022.01.15 - 2024.01.15</div>
                   </div>
                 </div>
                 <div class="divide-2">
@@ -91,9 +91,9 @@
                   </div>
                   <div class="line"></div>
                   <div class="product-detail">
-                    <div class="p-detail-stat">802RMJA298456</div>
-                    <div class="p-detail-stat">2024.08.09</div>
+                    <div class="p-detail-stat">2022.01.15</div>
                     <div class="p-detail-stat">5.1.2</div>
+                    <div class="p-detail-stat">2023.11.09 - Screen replacement</div>
                   </div>
                 </div>
               </div>
@@ -117,23 +117,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    const test = document.querySelector('.product')
-    // 첫 번째 아코디언 클릭 이벤트
-    document.querySelector('.accordion-item').addEventListener('click', function() {
-      this.classList.toggle('active');
-      test.style.visibility = "visible";
-    });
-
-    // 버튼 클릭 이벤트 처리 
-    document.getElementById('arrow-button').addEventListener('click', function(){
-      history.back();
-    });
-  document.getElementById('nextpage').addEventListener('click', function () {
-          window.location.href = '/process'; // Spring Controller의 매핑된 URL로 이동
-  });
-
-  </script>
+  <script src="js/mydevice.js"></script>
 </body>
 </html>
