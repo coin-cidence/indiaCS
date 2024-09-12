@@ -15,9 +15,11 @@ const progressDate2Text = document.querySelector('.complete-time-2');
 const progressText2 = document.querySelector('.diagnose-content-2');
 
 const progressDate3 = document.querySelector('.complete-diagnose-3');
+const progressDate3Text = document.querySelector('.complete-time-3');
 const progressText3 = document.querySelector('.diagnose-content-3');
 
 const progressDate4 = document.querySelector('.complete-diagnose-4');
+const progressDate4Text = document.querySelector('.complete-time-4');
 const progressText4 = document.querySelector('.diagnose-content-4');
 
 const line6 = document.querySelector('.line-6');
@@ -144,6 +146,7 @@ buttons.forEach(button => {
         }else{
             progressDate2.style.visibility = 'visible';
             progressText2.style.visibility = 'visible';
+            progressDate2Text.innerHTML = date4;
         }
 
         progressText2.innerHTML = 'Parts shipment initiated. <span class="real-diagnose-content"> HDMI Port Failure</span>';
@@ -156,6 +159,7 @@ buttons.forEach(button => {
         }else{
             progressDate3.style.visibility = 'visible';
             progressText3.style.visibility = 'visible';
+            progressDate3Text.innerHTML = date5;
         }
 
         if(!date6){
@@ -164,6 +168,7 @@ buttons.forEach(button => {
         }else{
             progressDate4.style.visibility = 'visible';
             progressText4.style.visibility = 'visible';
+            progressDate4Text.innerHTML = date6;
         }
     }
     else if(button.id === 'ellipseButton4'){

@@ -183,32 +183,32 @@ SELECT * FROM AS_REQUEST;
 SELECT * FROM DIAGNOSE;
 SELECT * FROM REPAIR;
 
+----
+--ALTER TABLE Review_more
+--DROP CONSTRAINT fk_review_more_as_request;
 --
-ALTER TABLE Review_more
-DROP CONSTRAINT fk_review_more_as_request;
-
-ALTER TABLE Review
-DROP CONSTRAINT fk_review_as_request
-DROP CONSTRAINT fk_review_technician;
-
-ALTER TABLE Repair
-DROP CONSTRAINT fk_repair_diagnose;
-
-ALTER TABLE Diagnose
-DROP CONSTRAINT fk_diagnose_as_request;
-
-ALTER TABLE AS_Request
-DROP CONSTRAINT fk_as_request_product;
-
-ALTER TABLE PRODUCT
-DROP CONSTRAINT fk_product_user;
-
-DROP TABLE REVIEW;
-DROP TABLE TECHNICIAN;
-DROP TABLE REVIEW_MORE;
-DROP TABLE PRODUCT;
-DROP TABLE REPAIR;
-DROP TABLE "User";
-DROP TABLE Diagnose;
-DROP TABLE AS_REQUEST;
+--ALTER TABLE Review
+--DROP CONSTRAINT fk_review_as_request
+--DROP CONSTRAINT fk_review_technician;
 --
+--ALTER TABLE Repair
+--DROP CONSTRAINT fk_repair_diagnose;
+--
+--ALTER TABLE Diagnose
+--DROP CONSTRAINT fk_diagnose_as_request;
+--
+--ALTER TABLE AS_Request
+--DROP CONSTRAINT fk_as_request_product;
+--
+--ALTER TABLE PRODUCT
+--DROP CONSTRAINT fk_product_user;
+--
+--DROP TABLE REVIEW;
+--DROP TABLE TECHNICIAN;
+--DROP TABLE REVIEW_MORE;
+--DROP TABLE PRODUCT;
+--DROP TABLE REPAIR;
+--DROP TABLE "User";
+--DROP TABLE Diagnose;
+--DROP TABLE AS_REQUEST;
+----
