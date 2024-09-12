@@ -183,6 +183,14 @@ SELECT * FROM AS_REQUEST;
 SELECT * FROM DIAGNOSE;
 SELECT * FROM REPAIR;
 
+
+---- 회원인 것만 
+--SELECT * FROM AS_REQUEST WHERE PRODUCT_ID IN ( SELECT PRODUCT_ID FROM PRODUCT WHERE USER_ID = 'user001' ) ; 
+--
+--select * from review where as_request_id = 'asr001';
+
+
+ 
 ----
 --ALTER TABLE Review_more
 --DROP CONSTRAINT fk_review_more_as_request;

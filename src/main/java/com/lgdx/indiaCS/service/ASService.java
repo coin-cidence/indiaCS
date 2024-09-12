@@ -24,12 +24,12 @@ public class ASService {
     @Autowired
     RepairRepository repairRepository;
 
-    public Optional<AsRequest> asRequestInfo(String asRequestId) {
-        return asRequestRepository.findByAsRequestId(asRequestId);
+    public AsRequest asRequestInfo(String asRequestId) {
+        return asRequestRepository.findByAsRequestId(asRequestId).orElse(null);
     }
 
-    public Optional<Diagnose> diagnoseInfo(String asRequestId) {
-        return diagnoseRepository.findByAsRequestId(asRequestId);
+    public Diagnose diagnoseInfo(String asRequestId) {
+        return diagnoseRepository.findByAsRequestId(asRequestId).orElse(null);
     }
 
     public List<Repair> repairInfo(String diagnoseId) {
