@@ -27,9 +27,12 @@ public class UserViewController {
     public String reservationCheck() { return "/reservationCheck"; }
 
     @PostMapping("/reservation-check")
-    public String checkReservation(@RequestParam("asRequestId") String asRequestId, Model model , HttpSession session) {
+    public String checkReservation(@RequestParam("asRequestId") String asRequestId,
+                                   Model model ,
+                                   HttpSession session) {
         boolean find = userService.checkReservationNumber(asRequestId);
         session.removeAttribute("asRequestId");
+        System.out.println("ok" + asRequestId);
 
         if (find) {
             session.setAttribute("asRequestId"  , asRequestId);
@@ -46,12 +49,14 @@ public class UserViewController {
                                Model model,
                                HttpSession session) {
         User user = userService.login(userId, password);
+        session.removeAttribute(userId);
 
         if(user != null) {
             model.addAttribute("username", user.getUserName());
+            session.setAttribute("userId",userId);
             return "/Installation_AS(mypage)";
         } else {
-            model.addAttribute("error", "ID or Password not found. Please try again.");
+            model.addAttribute("error", "ID or Password not found.<br>Please try again.");
             return "/login";
         }
     }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -43,16 +44,44 @@ public class ProcessViewController {
                     Diagnose diagnose = diagnoseOptional.get();
                     model.addAttribute("date2",formatter.format(diagnose.getDiagnoseDate()));
                     model.addAttribute("diagnosisData",diagnose.getDiagnoseContent());
-                    Optional<Repair>repairOptional = asService.repairInfo(diagnose.getDiagnoseId());
-                    if(repairOptional.isPresent()){
-                        Repair repair = repairOptional.get();
-                        model.addAttribute("date3",formatter.format(repair.getRepairDate()));
-                        model.addAttribute("repairData",repair.getRepairPartInventory());
-                    }
-                    else {
+                    List<Repair> repairList = asService.repairInfo(diagnose.getDiagnoseId());
+                    try{
+                        Repair repairState1 = repairList.get(0);
+                        model.addAttribute("date3",formatter.format(repairState1.getRepairDate()));
+                        model.addAttribute("RepairData",repairState1.getRepairPartInventory());
+                    }catch(Exception e){
                         model.addAttribute("date3","");
-                        model.addAttribute("repairData","");
+                        model.addAttribute("RepairData","");
                     }
+                    try{
+                        Repair repairState2 = repairList.get(1);
+                        model.addAttribute("date4",formatter.format(repairState2.getRepairDate()));
+                    }catch(Exception e){
+                        model.addAttribute("date4","");
+                    }
+                    try{
+                        Repair repairState3 = repairList.get(2);
+                        model.addAttribute("date5",formatter.format(repairState3.getRepairDate()));
+                    }catch(Exception e){
+                        model.addAttribute("date5","");
+                    }
+                    try{
+                        Repair repairState4 = repairList.get(3);
+                        model.addAttribute("date6",formatter.format(repairState4.getRepairDate()));
+                    }catch(Exception e){
+                        model.addAttribute("date6","");
+                    }
+
+//                    Optional<Repair>repairOptional = asService.repairInfo(diagnose.getDiagnoseId());
+//                    if(repairOptional.isPresent()){
+//                        Repair repair = repairOptional.get();
+//                        model.addAttribute("date3",formatter.format(repair.getRepairDate()));
+//                        model.addAttribute("repairData",repair.getRepairPartInventory());
+//                    }
+//                    else {
+//                        model.addAttribute("date3","");
+//                        model.addAttribute("repairData","");
+//                    }
                 }else {
                     model.addAttribute("date2","");
                     model.addAttribute("diagnosisData","");
