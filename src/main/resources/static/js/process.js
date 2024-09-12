@@ -206,7 +206,27 @@ stars.forEach((star, index) => {
             const rating = star.getAttribute('data-value'); // 클릭한 별의 값을 가져옴
             updateStars(rating); // 별점 업데이트 함수 호출 (별점 저장)
 //            alert(`You rated this: ${rating} out of 5 stars!`); // 결과 출력
-            document.getElementById('modalAbove').style.display = 'flex';
+         const data = {
+                    reviewRating: rating,
+                };
+       fetch('/updateRating', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            if (response.ok) {
+            } else {
+            alert("error");
+            }
+        })
+        .catch(error => {
+            alert('Submission failed. Please try again.');
+        });
+
+           document.getElementById('modalAbove').style.display = 'flex';
         });
 });
 
