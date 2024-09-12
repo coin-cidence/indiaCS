@@ -41,3 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //        registerButton.disabled = true;
 //    });
 });
+// lg 로고 클릭시 처리
+document.getElementById('homebutton').addEventListener('click', function () {
+        window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
+});

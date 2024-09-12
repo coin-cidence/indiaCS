@@ -98,3 +98,6 @@ function checkAllOptionsSelected() {
         window.location.href = '/diagnose1'; // 실제 URL로 교체
     }
 }
+document.getElementById('homebutton').addEventListener('click', function () {
+        window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
+});
