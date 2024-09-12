@@ -27,7 +27,7 @@ public class ProcessViewController {
     public String reviewComplete(HttpSession session, Model model) {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        System.out.println("[입력받은 asRequestId in ProcessViewController]" + session.getAttribute("asRequestId"));
+//        System.out.println("[입력받은 asRequestId in ProcessViewController]" + session.getAttribute("asRequestId"));
 
         // 세션에서 asRequestId 값을 가져옴
         Object asRequestId = session.getAttribute("asRequestId");
@@ -37,7 +37,6 @@ public class ProcessViewController {
             Optional<AsRequest>asRequestOptional = asService.asRequestInfo((String) asRequestId);
             if(asRequestOptional.isPresent()){
                 AsRequest asRequest = asRequestOptional.get();
-//                model.addAttribute("date1",formatter.format(asRequest.getAsRequestDate()));
                 model.addAttribute("date1",formatter.format(asRequest.getAsRequestDate()));
                 Optional<Diagnose>diagnoseOptional = asService.diagnoseInfo(asRequest.getAsRequestId());
                 if(diagnoseOptional.isPresent()){
@@ -48,7 +47,7 @@ public class ProcessViewController {
                     try{
                         Repair repairState1 = repairList.get(0);
                         model.addAttribute("date3",formatter.format(repairState1.getRepairDate()));
-                        model.addAttribute("RepairData",repairState1.getRepairPartInventory());
+                        model.addAttribute("repairData",repairState1.getRepairPartInventory());
                     }catch(Exception e){
                         model.addAttribute("date3","");
                         model.addAttribute("RepairData","");
@@ -71,17 +70,6 @@ public class ProcessViewController {
                     }catch(Exception e){
                         model.addAttribute("date6","");
                     }
-
-//                    Optional<Repair>repairOptional = asService.repairInfo(diagnose.getDiagnoseId());
-//                    if(repairOptional.isPresent()){
-//                        Repair repair = repairOptional.get();
-//                        model.addAttribute("date3",formatter.format(repair.getRepairDate()));
-//                        model.addAttribute("repairData",repair.getRepairPartInventory());
-//                    }
-//                    else {
-//                        model.addAttribute("date3","");
-//                        model.addAttribute("repairData","");
-//                    }
                 }else {
                     model.addAttribute("date2","");
                     model.addAttribute("diagnosisData","");
