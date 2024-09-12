@@ -9,6 +9,7 @@ import com.lgdx.indiaCS.repository.RepairRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,7 +32,7 @@ public class ASService {
         return diagnoseRepository.findByAsRequestId(asRequestId);
     }
 
-    public Optional<Repair> repairInfo(String diagnoseId) {
+    public List<Repair> repairInfo(String diagnoseId) {
         return repairRepository.findByAsDiagnoseId(diagnoseId);
     }
 }

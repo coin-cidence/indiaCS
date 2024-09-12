@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -53,10 +54,10 @@ public class ProcessDBTest {
         if (repairOptional.isPresent()) {
 
             Repair repair = repairOptional.get();
-            if(repair.getRepairPartInventory()==null) {
+            if (repair.getRepairPartInventory() == null) {
 //            System.out.println(repair.toString()); // 행 전체 정보
                 System.out.println(repair.getRepairState() + "(Date: " + repair.getRepairDate() + ")"); //1단계가 아니라면 단계, 날짜
-            }else{
+            } else {
                 System.out.println(repair.getRepairState() + " from \"" + repair.getRepairPartInventory() + "\" (Date: " + repair.getRepairDate() + ")"); //1단계라면 단계, 인벤토리 센터, 날짜
             }
         } else {
@@ -64,4 +65,13 @@ public class ProcessDBTest {
         }
     }
 
+    @Test
+    public void 진단아이디로수리내용불러오기() {
+
+        // 특정 진단 ID로 조회
+        List<Repair> repairList = repairRepository.findByAsDiagnoseId("diag000");
+
+        Repair repair = repairList.get(3);
+        System.out.println("확인: "+repair.getRepairState());
+    }
 }

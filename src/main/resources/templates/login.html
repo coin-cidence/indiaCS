@@ -101,7 +101,10 @@
                                     </button>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0" id="logButton">
                                         <button class="btn btn-primary" type="submit">Log in</button>
-                                        <p><span th:text="${error}"></span></p>
+                                    </div>
+                                    <div class="loginfail">
+                                        <span th:utext="${error}"></span>
+                                        <div><br></div>
                                     </div>
                                     <div class="socialIcon">
                                         <button><img src="img/login/facebook_logo.png"></button>
