@@ -48,13 +48,14 @@ rectangle.style.visibility = 'visible';
 function updateButtonStates() {
     // temp 값이 공백인지에 따라 버튼 활성화/비활성화
     buttons.forEach(button => {
-        if (!temp1) {
+        if (!date1) {
             // temp1이 공백이면 첫 번째 버튼 제외 비활성화
+            button.disabled = (button.id !== 'ellipseButton1');
+        } else if (!date2) {
+            // temp2가 공백이면 첫 번째랑 두 번째 버튼만 활성화
+            button.disabled = (button.id !== 'ellipseButton1');
             button.disabled = (button.id !== 'ellipseButton2');
-        } else if (!temp2) {
-            // temp2가 공백이면 첫 번째 버튼만 활성화
-            button.disabled = (button.id !== 'ellipseButton2');
-        } else if (!temp3) {
+        } else if (!date6) {
             // temp3이 공백이면 마지막 버튼만 비활성화
             button.disabled = (button.id === 'ellipseButton4');
         } else {
@@ -90,25 +91,27 @@ buttons.forEach(button => {
         progressTextTitle.innerHTML = 'Diagnostic Progress';
         progressTextTitle.style.visibility = 'visible';
 
-        progressDate1.style.visibility = 'visible';
-        progressText1.style.visibility = 'visible';
-//        progressDate1Text.innerHTML = '2024.09.06 13:30';
-        progressDate1Text.innerHTML = temp1;
-        progressText1.innerHTML = 'Service technician visit.';
-
-        if(temp2!=""){
-            progressDate2.style.visibility = 'visible';
-            progressText2.style.visibility = 'visible';
-            progressDate2Text.innerHTML = temp2;
-            progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'> HDMI Port Failure</span>.";
-            var progressText2Span = document.querySelector('.real-diagnose-content');
-            progressText2Span.innerText = " HDMI Port Failure";
+        if(!date1){
+            progressDate1.style.visibility = 'hidden';
+            progressText1.style.visibility = 'hidden';
         }else{
+            progressDate1.style.visibility = 'visible';
+            progressText1.style.visibility = 'visible';
+            progressDate1Text.innerHTML = date1;
+            progressText1.innerHTML = 'Service technician visit.';
+        }
+
+        if(!date2){
             progressDate2.style.visibility = 'hidden';
             progressText2.style.visibility = 'hidden';
+        }else{
+            progressDate2.style.visibility = 'visible';
+            progressText2.style.visibility = 'visible';
+            progressDate2Text.innerHTML = date2;
+            progressText2.innerHTML = "Diagnosis:<br>We've identified the issue with your device as <span class='real-diagnose-content'>HDMI Port Failure</span>.";
+            var progressText2Span = document.querySelector('.real-diagnose-content');
+            progressText2Span.innerText = data1;
         }
-//        progressDate2Text.innerHTML = '2024.09.06 17:10';
-
 
         progressDate3.style.visibility = 'hidden';
         progressText3.style.visibility = 'hidden';
@@ -130,21 +133,38 @@ buttons.forEach(button => {
         progressDate1.style.visibility = 'visible';
         progressText1.style.visibility = 'visible';
 //        progressDate1Text.innerHTML = '2024.09.09 10:10';
-        progressDate1Text.innerHTML = temp3;
-        progressText1.innerHTML = 'Parts order completed. (Parts inventory location: Changwon, South Korea)'
+        progressDate1Text.innerHTML = date3;
+        progressText1.innerHTML = 'Parts order completed. (Parts inventory location: <span class="real-repair-content">Changwon, South Korea</span>)';
+        var progressText1Span = document.querySelector('.real-repair-content');
+        progressText1Span.innerText = data2;
 
-        progressDate2.style.visibility = 'visible';
-        progressText2.style.visibility = 'visible';
-//        progressDate2Text.innerHTML = '2024.09.09 16:20';
+        if(!date4){
+            progressDate2.style.visibility = 'hidden';
+            progressText2.style.visibility = 'hidden';
+        }else{
+            progressDate2.style.visibility = 'visible';
+            progressText2.style.visibility = 'visible';
+        }
+
         progressText2.innerHTML = 'Parts shipment initiated. <span class="real-diagnose-content"> HDMI Port Failure</span>';
         var progressText2Span = document.querySelector('.real-diagnose-content');
         progressText2Span.innerText = '';
 
-        progressDate3.style.visibility = 'visible';
-        progressText3.style.visibility = 'visible';
+        if(!date5){
+            progressDate3.style.visibility = 'hidden';
+            progressText3.style.visibility = 'hidden';
+        }else{
+            progressDate3.style.visibility = 'visible';
+            progressText3.style.visibility = 'visible';
+        }
 
-        progressDate4.style.visibility = 'visible';
-        progressText4.style.visibility = 'visible';
+        if(!date6){
+            progressDate4.style.visibility = 'hidden';
+            progressText4.style.visibility = 'hidden';
+        }else{
+            progressDate4.style.visibility = 'visible';
+            progressText4.style.visibility = 'visible';
+        }
     }
     else if(button.id === 'ellipseButton4'){
         rectangle.style.visibility = 'hidden';
@@ -206,7 +226,27 @@ stars.forEach((star, index) => {
             const rating = star.getAttribute('data-value'); // 클릭한 별의 값을 가져옴
             updateStars(rating); // 별점 업데이트 함수 호출 (별점 저장)
 //            alert(`You rated this: ${rating} out of 5 stars!`); // 결과 출력
-            document.getElementById('modalAbove').style.display = 'flex';
+         const data = {
+                    reviewRating: rating,
+                };
+       fetch('/updateRating', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            if (response.ok) {
+            } else {
+            alert("error");
+            }
+        })
+        .catch(error => {
+            alert('Submission failed. Please try again.');
+        });
+
+           document.getElementById('modalAbove').style.display = 'flex';
         });
 });
 
