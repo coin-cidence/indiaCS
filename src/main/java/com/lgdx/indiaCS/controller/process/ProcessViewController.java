@@ -31,6 +31,7 @@ public class ProcessViewController {
 
         // 세션에서 asRequestId 값을 가져옴
         Object asRequestId = session.getAttribute("asRequestId");
+        Object userId = session.getAttribute("userId");
 
         // asRequestId가 null인지 확인
         if (asRequestId != null) {
