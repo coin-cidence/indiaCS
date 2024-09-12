@@ -467,18 +467,40 @@
   position: relative;
   justify-content: center;
   gap:10px;
+
 }
 
-.star {
-  background-image: url("../img/process/star.svg");
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
+/* 기본 별 색상 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+  left:20px;
 }
 
-.filled {
-  background-image: url("../img/process/filled-star.svg");
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
 }
 
 .modalAbove {

@@ -204,13 +204,11 @@ buttons.forEach(button => {
         progressText3.style.visibility = 'hidden';
         progressDate4.style.visibility = 'hidden';
         progressText4.style.visibility = 'hidden';
-//        confirmationText.innerHTML = 'Your reservation has been confirmed';
     }
   });
 });
 
 const stars = document.querySelectorAll('.star');
-let selectedRating = 0; // 사용자가 클릭한 별점 저장
 
 // 각 별에 마우스 오버 이벤트를 추가
 stars.forEach((star, index) => {
@@ -220,16 +218,12 @@ stars.forEach((star, index) => {
 
     // 마우스가 벗어났을 때 별을 초기화
     star.addEventListener('mouseout', () => {
-        resetStars();
-        if(selectedRating > 0){
-            updateStars(selectedRating);
-        }
+       fillStars(index);
     });
 
     // 별점 클릭 이벤트 추가
     star.addEventListener('click', () => {
             const rating = star.getAttribute('data-value'); // 클릭한 별의 값을 가져옴
-            updateStars(rating); // 별점 업데이트 함수 호출 (별점 저장)
 //            alert(`You rated this: ${rating} out of 5 stars!`); // 결과 출력
          const data = {
                     reviewRating: rating,
@@ -257,22 +251,10 @@ stars.forEach((star, index) => {
 
 // n번째 별까지 채우는 함수
 function fillStars(index) {
+    const maxStars = stars.length;
+    if(index>=maxStars) index = maxStars-1;
     for (let i = 0; i <= index; i++) {
-        stars[i].classList.add('filled');
-    }
-}
-
-// 모든 별을 초기 상태로 되돌리는 함수
-function resetStars() {
-    stars.forEach(star => {
-        star.classList.remove('filled');
-    });
-}
-
-// 클릭한 별 이후로 별 채우는 함수
-function updateStars(rating) {
-    for (let i = 0; i < rating; i++) {
-        stars[i].classList.add('filled');
+        stars[i].textContent = '★'; // Replace with the desired star character
     }
 }
 
@@ -295,6 +277,6 @@ document.getElementById('modalNoButton').addEventListener('click', function () {
     document.getElementById('modalAbove').style.display = 'none';
 });
 
-  document.getElementById('homebutton').addEventListener('click', function () {
-          window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
-  });
+document.getElementById('homebutton').addEventListener('click', function () {
+      window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
+});

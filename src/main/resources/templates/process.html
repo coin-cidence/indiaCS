@@ -126,16 +126,26 @@
     <div class="rating">
         <img class="image" src="img/process/image0.png" />
         <div class="star-rating">
-            <!-- 1번째 별 -->
-            <img class="star" id="star1" data-value="1"/>
-            <!-- 2번째 별 -->
-            <img class="star" id="star2" data-value="2"/>
-            <!-- 3번째 별 -->
-            <img class="star" id="star3" data-value="3"/>
-            <!-- 4번째 별 -->
-            <img class="star" id="star4" data-value="4"/>
-            <!-- 5번째 별 -->
-            <img class="star" id="star5" data-value="5"/>
+<!--            &lt;!&ndash; 1번째 별 &ndash;&gt;-->
+<!--            <img class="star" id="star1" data-value="1"/>-->
+<!--            &lt;!&ndash; 2번째 별 &ndash;&gt;-->
+<!--            <img class="star" id="star2" data-value="2"/>-->
+<!--            &lt;!&ndash; 3번째 별 &ndash;&gt;-->
+<!--            <img class="star" id="star3" data-value="3"/>-->
+<!--            &lt;!&ndash; 4번째 별 &ndash;&gt;-->
+<!--            <img class="star" id="star4" data-value="4"/>-->
+<!--            &lt;!&ndash; 5번째 별 &ndash;&gt;-->
+<!--            <img class="star" id="star5" data-value="5"/>-->
+            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+            <label for="5-stars" class="star" data-value="5">★</label>
+            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+            <label for="4-stars" class="star" data-value="4">★</label>
+            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+            <label for="3-stars" class="star" data-value="3">★</label>
+            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+            <label for="2-stars" class="star" data-value="2">★</label>
+            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+            <label for="1-star" class="star" data-value="1">★</label>
         </div>
         <div class="comment">
             &quot;How was technician Arjun?&quot;
