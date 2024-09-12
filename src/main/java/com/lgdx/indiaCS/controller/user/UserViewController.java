@@ -53,7 +53,7 @@ public class UserViewController {
 
         if(user != null) {
             model.addAttribute("username", user.getUserName());
-            session.setAttribute("userId",userId);
+            session.setAttribute("userId" , userId);
             return "/Installation_AS(mypage)";
         } else {
             model.addAttribute("error", "ID or Password not found.<br>Please try again.");

@@ -44,8 +44,13 @@ public class ProcessViewController {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
         // 세션에서 asRequestId 값을 가져옴
+<<<<<<< HEAD
         String asRequestId = (String) session.getAttribute("asRequestId");
         String userId = (String)session.getAttribute("userId");
+=======
+        Object asRequestId = session.getAttribute("asRequestId");
+        Object userId = session.getAttribute("userId");
+>>>>>>> b2719bc5a49b7ce07b3f490b646504228bf94672
 
         if (asRequestId == null && userId == null) {
             return "redirect:/reservation-check";

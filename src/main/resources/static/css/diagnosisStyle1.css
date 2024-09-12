@@ -109,6 +109,7 @@ body {
   padding-left:20px;
   align-items: center;
   justify-content: center;
+  cursor:pointer;
 }
 .lg_logo {
   height: 100%;
