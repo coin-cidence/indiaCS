@@ -52,7 +52,10 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-
+.loginfail{
+    font-size: 15px;
+    color : gray;
+}
 .card-footer {
     background-color: white;
     border: none;

@@ -51,7 +51,7 @@ public class UserViewController {
             model.addAttribute("username", user.getUserName());
             return "/Installation_AS(mypage)";
         } else {
-            model.addAttribute("error", "ID or Password not found. Please try again.");
+            model.addAttribute("error", "ID or Password not found.<br>Please try again.");
             return "/login";
         }
     }
