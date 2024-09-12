@@ -40,3 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+  document.getElementById('homebutton').addEventListener('click', function () {
+          window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
+  });

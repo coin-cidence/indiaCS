@@ -68,10 +68,5 @@ timeButtons.forEach(button => {
     // 클릭한 버튼에 'selected' 클래스를 추가하여 선택 상태 유지
     this.classList.add('selected');
   });
-<<<<<<< HEAD
 });
 
-z
-=======
-});
->>>>>>> 084e1f8fc789cd9745ef99edeee29303a12025c0

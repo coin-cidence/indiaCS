@@ -294,3 +294,7 @@ document.getElementById('modalNoButton').addEventListener('click', function () {
     window.location.href = '/Installation_AS(login)'; // Spring Controller의 매핑된 URL로 이동
     document.getElementById('modalAbove').style.display = 'none';
 });
+
+  document.getElementById('homebutton').addEventListener('click', function () {
+          window.location.href = '/'; // Spring Controller의 매핑된 URL로 이동
+  });
