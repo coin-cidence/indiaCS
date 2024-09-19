@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <img width="100%" src="표지.png" alt="web banner">
+    <img width="100%" src="./mdImage/표지.png" alt="web banner">
   </p>
 </div>
 
@@ -24,7 +24,7 @@
 
 <div align="center">
   <p>
-    <img width="100%" src="팀역할_임시.png">
+    <img width="100%" src="./mdImage/팀역할_임시.png">
   </p>
 </div>
 
@@ -42,7 +42,7 @@
 - 기간 : 24.08.02 ~ 24.09.13
 <div align="center">
   <p>
-    <img width="100%" src="프로젝트일정_간트차트.png">
+    <img width="100%" src="./mdImage/프로젝트일정_간트차트.png">
   </p>
 </div>
 
@@ -148,22 +148,22 @@
 
 # <div id="content9" align=center> 📜 ERD </div>
 <div align=center>
-    <img src="ERD.png"/>
+    <img src="./mdImage/ERD.png"/>
 </div>
 
 # <div id="content10" align=center> 🪟 화면구성 </div>
 ### Main & Login
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="1.png"></td>
-    <td><img width="100%" src="2.png"></td>
+    <td><img width="100%" src="./mdImage/1.png"></td>
+    <td><img width="100%" src="./mdImage/2.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="3.png"></td>
-    <td><img width="100%" src="4.png"></td>
+    <td><img width="100%" src="./mdImage/3.png"></td>
+    <td><img width="100%" src="./mdImage/4.png"></td>
   </tr>
     <tr>
-    <td><img width="100%" src="5.png"></td>
+    <td><img width="100%" src="./mdImage/5.png"></td>
   </tr>
 </table>
 <br>
@@ -171,12 +171,12 @@
 ### Device Selection
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="6.png"></td>
-    <td><img width="100%" src="7.png"></td>
+    <td><img width="100%" src="./mdImage/6.png"></td>
+    <td><img width="100%" src="./mdImage/7.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="8.png"></td>
-    <td><img width="100%" src="9.png"></td>
+    <td><img width="100%" src="./mdImage/8.png"></td>
+    <td><img width="100%" src="./mdImage/9.png"></td>
   </tr>
 </table>
 <br>
@@ -184,11 +184,11 @@
 ### Diagnosis
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="10.png"></td>
-    <td><img width="100%" src="11.png"></td>
+    <td><img width="100%" src="./mdImage/10.png"></td>
+    <td><img width="100%" src="./mdImage/11.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="12.png"></td>
+    <td><img width="100%" src="./mdImage/12.png"></td>
   </tr>
 </table>
 <br>
@@ -196,11 +196,11 @@
 ### AS Reservation
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="13.png"></td>
-    <td><img width="100%" src="14.png"></td>
+    <td><img width="100%" src="./mdImage/13.png"></td>
+    <td><img width="100%" src="./mdImage/14.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="15.png"></td>
+    <td><img width="100%" src="./mdImage/15.png"></td>
   </tr>
 </table>
 <br>
@@ -208,15 +208,15 @@
 ### AS Process
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="16.png"></td>
-    <td><img width="100%" src="17.png"></td>
+    <td><img width="100%" src="./mdImage/16.png"></td>
+    <td><img width="100%" src="./mdImage/17.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="18.png"></td>
-    <td><img width="100%" src="19.png"></td>
+    <td><img width="100%" src="./mdImage/18.png"></td>
+    <td><img width="100%" src="./mdImage/19.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="20.png"></td>
+    <td><img width="100%" src="./mdImage/20.png"></td>
   </tr>
 </table>
 <br>
@@ -224,15 +224,15 @@
 ### Review
 <table style="width:100%; text-align:center;">
   <tr>
-    <td><img width="100%" src="21.png"></td>
-    <td><img width="100%" src="22.png"></td>
+    <td><img width="100%" src="./mdImage/21.png"></td>
+    <td><img width="100%" src="./mdImage/22.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="23.png"></td>
-    <td><img width="100%" src="24.png"></td>
+    <td><img width="100%" src="./mdImage/23.png"></td>
+    <td><img width="100%" src="./mdImage/24.png"></td>
   </tr>
   <tr>
-    <td><img width="100%" src="25.png"></td>
+    <td><img width="100%" src="./mdImage/25.png"></td>
   </tr>
 </table>
 <br>
