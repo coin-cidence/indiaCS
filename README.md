@@ -145,17 +145,7 @@
 
 # <div id="content8" align=center> 🌊 서비스 흐름도 </div>
 
-<style>
-.wrap-vertical::-webkit-scrollbar {
-    display: none; /* 웹킷 기반 브라우저에서 스크롤바 감추기 */
-}
-.wrap-vertical {
-    -ms-overflow-style: none;  /* IE 및 Edge에서 스크롤바 감추기 */
-    scrollbar-width: none;     /* Firefox에서 스크롤바 감추기 */
-}
-</style>
-
-<div class="wrap-vertical" align=center style="overflow-x: auto; white-space: nowrap;">
+<div align=center style="overflow-x: auto; white-space: nowrap;">
   <img style="min-width: 2000px;" src="./mdImage/서비스흐름도.png" alt="서비스 흐름도">
 </div>
 
