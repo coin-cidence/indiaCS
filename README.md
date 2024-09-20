@@ -145,7 +145,7 @@
 
 # <div id="content8" align=center> 🌊 서비스 흐름도 </div>
 
-<div align=center style="overflow-x: auto; white-space: nowrap;">
+<div align=center style="width: 100%; overflow-x: scroll;"">
   <img style="min-width: 2000px;" src="./mdImage/서비스흐름도.png" alt="서비스 흐름도">
 </div>
 
