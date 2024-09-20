@@ -125,7 +125,7 @@
 3. 조회창에서 접수번호를 입력한다. 
 4. AS 프로세스의 접수확인 단계를 조회한다. 
 5. AS 프로세스 완료 시, 서비스 기사의 별점/설문 리뷰를 작성한다.
-6. AS 프로세스 화면 조회 완료 or 리뷰 완료시 종료  
+6. AS 프로세스 화면 조회 완료 or 리뷰 완료시 종료
 <br></br>
 
 **AS 접수**
@@ -145,6 +145,19 @@
 
 # <div id="content8" align=center> 🌊 서비스 흐름도 </div>
 
+<style>
+.wrap-vertical::-webkit-scrollbar {
+    display: none; /* 웹킷 기반 브라우저에서 스크롤바 감추기 */
+}
+.wrap-vertical {
+    -ms-overflow-style: none;  /* IE 및 Edge에서 스크롤바 감추기 */
+    scrollbar-width: none;     /* Firefox에서 스크롤바 감추기 */
+}
+</style>
+
+<div class="wrap-vertical" align=center style="overflow-x: auto; white-space: nowrap;">
+  <img style="min-width: 2000px;" src="./mdImage/서비스흐름도.png" alt="서비스 흐름도">
+</div>
 
 # <div id="content9" align=center> 📜 ERD </div>
 <div align=center>
@@ -239,7 +252,7 @@
 
 # <div id="content11" align=center> ✅ 트러블슈팅 </div>
 
-# 마치며 프로젝트 후기
+# <div id="content12" align=center> 마치며 프로젝트 후기 </div>
 ### 🐔 김성훈 🐔
 제가 이런 프로젝트는 처음이라 프로세스를 어떻게 밟아가야 효율적인지 잘 몰랐어요. 그래서 체계적으로 프로세스를 설계하지 못한게 많이 아쉽습니다ㅠㅠ 또 제 자신이 충분히 열심히 하고 있다고 생각했는데 모두가 프로젝트에 집중하는 모습을 보면 더 노력해야겠다고 느꼈습니다. 다들 너무 고생한만큼 앞으로도 잘 됐으면 좋겠고 DX에서 더 좋은 사람들과 더 좋은 결과물냈으면 좋겠어요 오조사마 고생했다 안녕~~~!!
 ### 🐨 김근호 🐨
