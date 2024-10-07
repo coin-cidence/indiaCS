@@ -1,12 +1,11 @@
+<div align=center><h1>LG FIX in India</h1></div>
 <div align="center">
-  <p>
     <img width="100%" src="./mdImage/표지.png" alt="web banner">
-  </p>
 </div>
 
 <div align=center><h1>🔖 목차</h1></div>
 <ol>
-  <li><a href = "#content1"> 🚩 LG FIX in India (팀명: 5조사마) </a></li>
+  <li><a href = "#content1"> 👥 5조사마 소개 </a></li>
   <li><a href = "#content2"> 🗨️ 서비스 소개 </a></li>
   <li><a href = "#content3"> 🗓️ 프로젝트 기간 </a></li>
   <li><a href = "#content4"> 🛠️ 주요기능 </a></li>
@@ -19,8 +18,7 @@
   <li><a href = "#content11"> ✅ 트러블슈팅 </a></li>
 </ol>
 
-# <div id="content1" align=center>🚩 LG FIX in India (팀명: 5조사마)</div>
-**팀원 역할**
+# <div id="content1" align=center>👥 5조사마 소개 </div>
 
 <div align="center">
   <p>
@@ -68,7 +66,9 @@
 
 # <div id="content5" align=center> 🚨 시스템 아키텍처 </div>
 
-
+<div align=center>
+    <img src="./mdImage/시스템 아키텍처.drawio.svg"/>
+</div>
 
 # <div id="content6" align=center> 📚 기술 스택 </div>
 <div align=center>
@@ -240,7 +240,22 @@
 </table>
 <br>
 
+<!-- <div align="center">
+  <img src="https://github.com/user-attachments/assets/183d7903-f746-42c1-af93-35a8f3b84eaf" alt="login">
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9790b894-d497-4f3a-a5f3-66e57c181818" alt="AS process">
+</div>
+
+</div>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6111632a-eb96-4d6d-a698-19011ca0b466" alt="ASReservation GIF">
+</div> -->
+
+
 # <div id="content11" align=center> ✅ 트러블슈팅 </div>
+- 리뷰 데이터 비정상 적재 이슈
+- 화면 크기별로 바뀌는 상단바 위치 이슈
 
 # <div id="content12" align=center> 마치며 프로젝트 후기 </div>
 ### 🐔 김성훈 🐔
@@ -255,3 +270,7 @@
 해외 시장 데이터를 분석해 도메인을 정하고 인사이트를 얻는 것부터 솔루션을 도출해 웹페이지를 구축하는 것까지 어려움이 많은 프로젝트였으나 각각 다른 강점과 역량을 가진 팀원들이 있어 성공적으로 프로젝트를 마무리할 수 있었습니다. 특히 모든 팀원이 웹페이지 구현이 처음이었지만 누가 먼저랄 것 없이 모두가 추가적인 시간과 노력을 투입하고 격려와 응원을 통해 계획했던 기능을 모두 구현할 수 있었습니다. 서로를 배려하며 열심히 프로젝트에 임한 팀원들도, 수업을 통해 새롭게 배운 기술을 처음 적용해보는 저희를 불철주야 도와주신 강사님들께도 정말 감사한 프로젝트였습니다.
 ### 🐼 양도연 🐼 
 CX 프로젝트를 시작한지 엊그제 같은데 벌써 두 달이나 지났다니! 오랜만에 하나의 목표를 향해 몰입하는 시간을 가졌던 것 같아 스스로 뿌듯하기도 하고, 같이 프로젝트를 진행해준 팀원들에게 많은 감사함을 느낍니다. '도움이 되지 못하더라도 피해는 주지 말자' 라는 마음으로 최선을 다했는데 잘 전해졌는지 모르겠네요 ㅎ.ㅎ (그랬겠죠..?) 부족하더라도 팀원들과 강사님들이 옆에서 열심히 도와주신 덕분에 프로젝트 기획에서부터 서비스 구현 단계까지 배웠던 것들을 적용해보면서 다방면으로 성장할 수 있었던 것 같습니다. 다시 한번 감사했다는 말 전하고 싶네요. 모두 고생 많으셨습니다 !!
+
+|<div style="width:441px">property</div>|<div style="width:441px">property</div>|
+| --------------------------------------- | ------------------------------------- |
+| `border-bottom-right-radius`            | Defines the shape of the bottom-right |
